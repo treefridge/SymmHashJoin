@@ -1,0 +1,20 @@
+fe-auth.o: fe-auth.c ../../../src/include/postgres_fe.h \
+ ../../../src/include/c.h ../../../src/include/pg_config.h \
+ ../../../src/include/pg_config_manual.h \
+ ../../../src/include/pg_config_os.h ../../../src/include/postgres_ext.h \
+ ../../../src/include/port.h libpq-fe.h \
+ ../../../src/include/postgres_ext.h libpq-int.h \
+ ../../../src/include/getaddrinfo.h ../../../src/include/libpq/pqcomm.h \
+ pqexpbuffer.h fe-auth.h ../../../src/include/libpq/crypt.h \
+ ../../../src/include/libpq/libpq-be.h ../../../src/include/libpq/hba.h \
+ ../../../src/include/nodes/pg_list.h ../../../src/include/nodes/nodes.h
+fe-auth.c ../../../src/include/postgres_fe.h :
+ ../../../src/include/c.h ../../../src/include/pg_config.h :
+ ../../../src/include/pg_config_manual.h :
+ ../../../src/include/pg_config_os.h ../../../src/include/postgres_ext.h :
+ ../../../src/include/port.h libpq-fe.h :
+ ../../../src/include/postgres_ext.h libpq-int.h :
+ ../../../src/include/getaddrinfo.h ../../../src/include/libpq/pqcomm.h :
+ pqexpbuffer.h fe-auth.h ../../../src/include/libpq/crypt.h :
+ ../../../src/include/libpq/libpq-be.h ../../../src/include/libpq/hba.h :
+ ../../../src/include/nodes/pg_list.h ../../../src/include/nodes/nodes.h :

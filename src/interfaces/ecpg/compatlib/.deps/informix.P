@@ -1,0 +1,24 @@
+informix.o: informix.c ../../../../src/interfaces/ecpg/include/ecpgtype.h \
+ ../../../../src/interfaces/ecpg/include/ecpg_informix.h \
+ ../../../../src/interfaces/ecpg/include/ecpglib.h \
+ ../../../../src/interfaces/libpq/libpq-fe.h \
+ ../../../../src/include/postgres_ext.h \
+ ../../../../src/interfaces/ecpg/include/ecpgtype.h \
+ ../../../../src/interfaces/ecpg/include/pgtypes_date.h \
+ ../../../../src/interfaces/ecpg/include/pgtypes_timestamp.h \
+ ../../../../src/interfaces/ecpg/include/pgtypes_interval.h \
+ ../../../../src/interfaces/ecpg/include/pgtypes_numeric.h \
+ ../../../../src/interfaces/ecpg/include/pgtypes_error.h \
+ ../../../../src/interfaces/ecpg/include/sqltypes.h
+informix.c ../../../../src/interfaces/ecpg/include/ecpgtype.h :
+ ../../../../src/interfaces/ecpg/include/ecpg_informix.h :
+ ../../../../src/interfaces/ecpg/include/ecpglib.h :
+ ../../../../src/interfaces/libpq/libpq-fe.h :
+ ../../../../src/include/postgres_ext.h :
+ ../../../../src/interfaces/ecpg/include/ecpgtype.h :
+ ../../../../src/interfaces/ecpg/include/pgtypes_date.h :
+ ../../../../src/interfaces/ecpg/include/pgtypes_timestamp.h :
+ ../../../../src/interfaces/ecpg/include/pgtypes_interval.h :
+ ../../../../src/interfaces/ecpg/include/pgtypes_numeric.h :
+ ../../../../src/interfaces/ecpg/include/pgtypes_error.h :
+ ../../../../src/interfaces/ecpg/include/sqltypes.h :

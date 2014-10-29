@@ -1,0 +1,24 @@
+typename.o: typename.c ../../../../src/include/postgres_fe.h \
+ ../../../../src/include/c.h ../../../../src/include/pg_config.h \
+ ../../../../src/include/pg_config_manual.h \
+ ../../../../src/include/pg_config_os.h \
+ ../../../../src/include/postgres_ext.h ../../../../src/include/port.h \
+ ../../../../src/interfaces/ecpg/include/ecpgtype.h \
+ ../../../../src/interfaces/ecpg/include/ecpglib.h \
+ ../../../../src/interfaces/libpq/libpq-fe.h \
+ ../../../../src/include/postgres_ext.h \
+ ../../../../src/interfaces/ecpg/include/ecpgtype.h extern.h \
+ ../../../../src/interfaces/ecpg/include/sqlca.h \
+ ../../../../src/interfaces/ecpg/include/sql3types.h pg_type.h
+typename.c ../../../../src/include/postgres_fe.h :
+ ../../../../src/include/c.h ../../../../src/include/pg_config.h :
+ ../../../../src/include/pg_config_manual.h :
+ ../../../../src/include/pg_config_os.h :
+ ../../../../src/include/postgres_ext.h ../../../../src/include/port.h :
+ ../../../../src/interfaces/ecpg/include/ecpgtype.h :
+ ../../../../src/interfaces/ecpg/include/ecpglib.h :
+ ../../../../src/interfaces/libpq/libpq-fe.h :
+ ../../../../src/include/postgres_ext.h :
+ ../../../../src/interfaces/ecpg/include/ecpgtype.h extern.h :
+ ../../../../src/interfaces/ecpg/include/sqlca.h :
+ ../../../../src/interfaces/ecpg/include/sql3types.h pg_type.h :

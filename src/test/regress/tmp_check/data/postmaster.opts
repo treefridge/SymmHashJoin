@@ -1,0 +1,1 @@
+/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/tmp_check/install/home/genh/h/i2/pidur072/database/bin/postgres -D /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/data -F -c listen_addresses=

@@ -1,0 +1,2513 @@
+LOG:  database system was shut down at 2014-10-28 16:59:12 EDT
+LOG:  checkpoint record is at 0/38FF90
+LOG:  redo record is at 0/38FF90; undo record is at 0/0; shutdown TRUE
+LOG:  next transaction ID: 565; next OID: 10794
+LOG:  next MultiXactId: 1; next MultiXactOffset: 0
+LOG:  database system is ready
+LOG:  transaction ID wrap limit is 2147484146, limited by database "postgres"
+LOG:  transaction ID wrap limit is 2147484146, limited by database "postgres"
+ERROR:  role "regressgroup1" does not exist
+ERROR:  invalid input syntax for integer: "34.5"
+ERROR:  bit string length 2 does not match type bit(11)
+ERROR:  value too long for type character varying(1)
+ERROR:  invalid input syntax for integer: "34.5"
+ERROR:  "10e400" is out of range for type double precision
+ERROR:  "-10e400" is out of range for type double precision
+ERROR:  value "100000" is out of range for type smallint
+ERROR:  "10e-400" is out of range for type double precision
+ERROR:  invalid input syntax for integer: "asdf"
+ERROR:  "-10e-400" is out of range for type double precision
+ERROR:  invalid input syntax for integer: "    "
+ERROR:  invalid input syntax for type double precision: ""
+ERROR:  invalid input syntax for type double precision: "     "
+ERROR:  invalid input syntax for type double precision: "xyz"
+ERROR:  invalid input syntax for integer: "- 1234"
+ERROR:  invalid input syntax for type double precision: "5.0.0"
+ERROR:  invalid input syntax for integer: "4 444"
+ERROR:  invalid input syntax for type double precision: "5 . 0"
+ERROR:  invalid input syntax for integer: "123 dt"
+ERROR:  invalid input syntax for type double precision: "5.   0"
+ERROR:  invalid input syntax for type double precision: "    - 3"
+ERROR:  invalid input syntax for integer: ""
+ERROR:  invalid input syntax for type double precision: "123           5"
+ERROR:  invalid input syntax for type double precision: "N A N"
+ERROR:  invalid input syntax for type double precision: "NaN x"
+ERROR:  invalid input syntax for type double precision: " INFINITY    x"
+ERROR:  type "double precision" value out of range: overflow
+ERROR:  smallint out of range
+ERROR:  value too long for type character(1)
+ERROR:  smallint out of range
+ERROR:  smallint out of range
+ERROR:  value "1000000000000" is out of range for type integer
+ERROR:  invalid input syntax for integer: "asdf"
+ERROR:  invalid input syntax for integer: "     "
+ERROR:  invalid input syntax for integer: "   asdf   "
+ERROR:  invalid input syntax for integer: "- 1234"
+ERROR:  invalid input syntax for integer: "123       5"
+ERROR:  invalid input syntax for integer: ""
+ERROR:  integer out of range
+ERROR:  invalid input syntax for type boolean: "XXX"
+ERROR:  integer out of range
+ERROR:  integer out of range
+ERROR:  integer out of range
+ERROR:  integer out of range
+ERROR:  integer out of range
+ERROR:  bit string length 12 does not match type bit(11)
+ERROR:  invalid input syntax for type oid: ""
+ERROR:  invalid input syntax for type oid: "    "
+ERROR:  invalid input syntax for type oid: "asdfasd"
+ERROR:  invalid input syntax for type oid: "99asdfasd"
+ERROR:  invalid input syntax for type oid: "5    d"
+ERROR:  invalid input syntax for type oid: "    5d"
+ERROR:  invalid input syntax for type oid: "5    5"
+ERROR:  invalid input syntax for type oid: " - 500"
+ERROR:  value "32958209582039852935" is out of range for type oid
+ERROR:  type "double precision" value out of range: overflow
+ERROR:  value "-23582358720398502385" is out of range for type oid
+ERROR:  result is out of range
+ERROR:  cannot take logarithm of zero
+ERROR:  cannot take logarithm of a negative number
+ERROR:  result is out of range
+ERROR:  division by zero
+ERROR:  "10e400" is out of range for type double precision
+ERROR:  "-10e400" is out of range for type double precision
+ERROR:  "10e-400" is out of range for type double precision
+ERROR:  "-10e-400" is out of range for type double precision
+ERROR:  type "real" value out of range: overflow
+ERROR:  type "real" value out of range: overflow
+ERROR:  type "real" value out of range: underflow
+ERROR:  type "real" value out of range: underflow
+ERROR:  invalid input syntax for type real: ""
+ERROR:  invalid input syntax for type real: "       "
+ERROR:  invalid input syntax for type real: "xyz"
+ERROR:  invalid input syntax for type real: "5.0.0"
+ERROR:  invalid input syntax for type real: "5 . 0"
+ERROR:  invalid input syntax for type real: "5.   0"
+ERROR:  invalid input syntax for type real: "     - 3.0"
+ERROR:  invalid input syntax for type real: "123            5"
+ERROR:  invalid input syntax for type real: "N A N"
+ERROR:  invalid input syntax for type real: "NaN x"
+ERROR:  invalid input syntax for type real: " INFINITY    x"
+ERROR:  type "double precision" value out of range: overflow
+ERROR:  division by zero
+ERROR:  invalid input syntax for integer: "      "
+ERROR:  invalid input syntax for integer: "xxx"
+ERROR:  value "3908203590239580293850293850329485" is out of range for type bigint
+ERROR:  value "-1204982019841029840928340329840934" is out of range for type bigint
+ERROR:  invalid input syntax for integer: "- 123"
+ERROR:  invalid input syntax for integer: "  345     5"
+ERROR:  invalid input syntax for integer: ""
+ERROR:  bit string too long for type bit varying(11)
+ERROR:  bigint out of range
+ERROR:  value too long for type character varying(4)
+ERROR:  value "-9223372036854775809" is out of range for type bigint
+ERROR:  value "9223372036854775808" is out of range for type bigint
+ERROR:  value too long for type character(4)
+ERROR:  cannot AND bit strings of different sizes
+ERROR:  cannot OR bit strings of different sizes
+ERROR:  cannot XOR bit strings of different sizes
+ERROR:  numeric field overflow
+DETAIL:  The absolute value is greater than or equal to 10^0 for field with precision 4, scale 4.
+ERROR:  numeric field overflow
+DETAIL:  The absolute value is greater than or equal to 10^0 for field with precision 4, scale 4.
+ERROR:  count must be greater than zero
+ERROR:  count must be greater than zero
+ERROR:  lower bound cannot equal upper bound
+ERROR:  invalid input syntax for type numeric: "NaN "
+ERROR:  invalid input syntax for type numeric: "        nan"
+ERROR:  invalid input syntax for type numeric: "     "
+ERROR:  invalid input syntax for type numeric: "   1234   %"
+ERROR:  invalid input syntax for type numeric: "xyz"
+ERROR:  invalid input syntax for type numeric: "- 1234"
+ERROR:  invalid input syntax for type numeric: "5 . 0"
+ERROR:  invalid input syntax for type numeric: "5. 0   "
+ERROR:  invalid input syntax for type numeric: ""
+ERROR:  invalid input syntax for type numeric: " N aN "
+ERROR:  syntax error at or near "' - third line'" at character 75
+ERROR:  invalid option of regexp_replace: z
+ERROR:  negative substring length not allowed
+ERROR:  negative substring length not allowed
+ERROR:  field position must be greater than zero
+ERROR:  invalid input syntax for type point: "asdfasdf"
+ERROR:  invalid input syntax for type point: "(10.0 10.0)"
+ERROR:  invalid input syntax for type point: "(10.0,10.0"
+ERROR:  date/time value "current" is no longer supported
+ERROR:  date/time field value out of range: "1997-02-29"
+ERROR:  invalid input syntax for type box: "(2.3, 4.5)"
+ERROR:  invalid input syntax for type box: "asdfasdf(ad"
+ERROR:  date/time field value out of range: "1/8/1999"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "1/18/1999"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "18/1/1999"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "January 8, 99 BC"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "08-Jan-99"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "Jan-08-99"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  invalid input syntax for type date: "99-08-Jan"
+ERROR:  invalid input syntax for type date: "1999-08-Jan"
+ERROR:  date/time field value out of range: "08 Jan 99"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "Jan 08 99"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "08-01-99"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "08-01-1999"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "01-08-99"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "01-08-1999"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "08 01 99"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "08 01 1999"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "01 08 99"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "01 08 1999"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "1/18/1999"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "99-Jan-08"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  invalid input syntax for type date: "99-08-Jan"
+ERROR:  invalid input syntax for type date: "1999-08-Jan"
+ERROR:  date/time field value out of range: "99 Jan 08"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  invalid input syntax for type date: "99 08 Jan"
+ERROR:  date/time field value out of range: "99-01-08"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "99-08-01"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "99 01 08"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "99 08 01"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "18/1/1999"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "99-Jan-08"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  invalid input syntax for type date: "99-08-Jan"
+ERROR:  invalid input syntax for type date: "1999-08-Jan"
+ERROR:  invalid input syntax for type date: "99 Jan 08"
+ERROR:  invalid input syntax for type lseg: "(3asdf,2 ,3,4r2)"
+ERROR:  invalid input syntax for type lseg: "[1,2,3, 4"
+ERROR:  invalid input syntax for type lseg: "[(,2),(3,4)]"
+ERROR:  invalid input syntax for type lseg: "[(1,2),(3,4)"
+ERROR:  invalid input syntax for type date: "99 08 Jan"
+ERROR:  date/time field value out of range: "99-01-08"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "99-08-01"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "99 01 08"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "99 08 01"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  table "inet_tbl" does not exist
+ERROR:  invalid input syntax for type polygon: "0.0"
+ERROR:  invalid input syntax for type polygon: "(0.0 0.0"
+ERROR:  invalid input syntax for type polygon: "(0,1,2)"
+ERROR:  invalid input syntax for type polygon: "(0,1,2,3"
+ERROR:  invalid input syntax for type polygon: "asdf"
+ERROR:  invalid input syntax for type path: "[(,2),(3,4)]"
+ERROR:  invalid input syntax for type path: "[(1,2),(3,4)"
+ERROR:  date/time value "invalid" is no longer supported
+ERROR:  date/time value "Invalid Abstime" is no longer supported
+ERROR:  date/time value "Undefined Abstime" is no longer supported
+ERROR:  date/time value "current" is no longer supported
+ERROR:  invalid input syntax for type circle: "<(-100,0),-100>"
+ERROR:  invalid input syntax for type circle: "1abc,3,5"
+ERROR:  invalid input syntax for type circle: "(3,(1,2),3)"
+ERROR:  operator does not exist: time with time zone + time with time zone
+HINT:  No operator matches the given name and argument type(s). You may need to add explicit type casts.
+ERROR:  invalid input syntax for type reltime: "badly formatted reltime"
+ERROR:  invalid input syntax for type reltime: "@ 30 eons ago"
+ERROR:  date/time field value out of range: "Feb 35, 1946 10:00:00"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  date/time field value out of range: "Feb 28, 1984 25:08:10"
+ERROR:  invalid input syntax for type abstime: "bad date format"
+ERROR:  invalid input syntax for type abstime: "bad time specifications"
+ERROR:  invalid input syntax for type abstime: ""
+ERROR:  operator is not unique: time without time zone + time without time zone
+HINT:  Could not choose a best candidate operator. You may need to add explicit type casts.
+ERROR:  date/time value "invalid" is no longer supported
+ERROR:  invalid input syntax for type interval: "badly formatted interval"
+ERROR:  invalid input syntax for type interval: "@ 30 eons ago"
+ERROR:  date/time value "Invalid Abstime" is no longer supported
+ERROR:  date/time value "Undefined Abstime" is no longer supported
+ERROR:  invalid cidr value: "192.168.1.2/30"
+DETAIL:  Value has bits set to right of mask.
+ERROR:  invalid input syntax for type cidr: "1234::1234::1234"
+ERROR:  invalid cidr value: "192.168.1.2/30"
+DETAIL:  Value has bits set to right of mask.
+ERROR:  invalid cidr value: "ffff:ffff:ffff:ffff::/24"
+DETAIL:  Value has bits set to right of mask.
+ERROR:  date/time field value out of range: "Feb 29 17:32:01 1997"
+ERROR:  time zone displacement out of range: "Feb 16 17:32:01 -0097"
+ERROR:  timestamp out of range: "Feb 16 17:32:01 5097 BC"
+ERROR:  date/time field value out of range: "Feb 29 17:32:01 1997"
+ERROR:  time zone displacement out of range: "Feb 16 17:32:01 -0097"
+ERROR:  timestamp out of range: "Feb 16 17:32:01 5097 BC"
+ERROR:  invalid value for MON/Mon/mon
+ERROR:  invalid value for MON/Mon/mon
+ERROR:  operator does not exist: lseg # point
+HINT:  No operator matches the given name and argument type(s). You may need to add explicit type casts.
+ERROR:  date/time field value out of range: "27/12/2001 04:05:06.789-08"
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR:  operator does not exist: date - time with time zone
+HINT:  No operator matches the given name and argument type(s). You may need to add explicit type casts.
+ERROR:  cannot cast type time with time zone to interval
+ERROR:  cannot cast type interval to time with time zone
+ERROR:  cannot convert abstime "invalid" to timestamp
+ERROR:  null value in column "col2" violates not-null constraint
+ERROR:  INSERT has more target columns than expressions
+ERROR:  INSERT has more target columns than expressions
+ERROR:  INSERT has more expressions than target columns
+ERROR:  INSERT has more expressions than target columns
+NOTICE:  type "widget" is not yet defined
+DETAIL:  Creating a shell type definition.
+NOTICE:  argument type widget is only a shell
+NOTICE:  type "city_budget" is not yet defined
+DETAIL:  Creating a shell type definition.
+NOTICE:  argument type city_budget is only a shell
+ERROR:  return type mismatch in function declared to return integer
+DETAIL:  Actual return type is "unknown".
+CONTEXT:  SQL function "test1"
+ERROR:  syntax error at or near "not" at character 62
+ERROR:  return type mismatch in function declared to return integer
+DETAIL:  Final SELECT must return exactly one column.
+CONTEXT:  SQL function "test1"
+ERROR:  there is no parameter $2
+CONTEXT:  SQL function "test1"
+ERROR:  only one AS item needed for language "sql"
+ERROR:  could not access file "nosuchfile": No such file or directory
+ERROR:  could not find function "nosuchsymbol" in file "/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/regress.so"
+ERROR:  there is no built-in function named "nosuch"
+NOTICE:  type "int42" is not yet defined
+DETAIL:  Creating a shell type definition.
+NOTICE:  argument type int42 is only a shell
+NOTICE:  type "text_w_default" is not yet defined
+DETAIL:  Creating a shell type definition.
+NOTICE:  argument type text_w_default is only a shell
+ERROR:  type "bad" does not exist
+NOTICE:  drop cascades to function get_default_test()
+NOTICE:  merging multiple inherited definitions of column "name"
+NOTICE:  merging multiple inherited definitions of column "age"
+NOTICE:  merging multiple inherited definitions of column "location"
+NOTICE:  merging multiple inherited definitions of column "class"
+NOTICE:  merging multiple inherited definitions of column "a"
+NOTICE:  type reference hobbies_r.name%TYPE converted to text
+NOTICE:  type reference hobbies_r.person%TYPE converted to text
+ERROR:  aggregate newavg_wrong(integer) does not exist
+ERROR:  aggregate nosuchagg(*) does not exist
+ERROR:  operator does not exist: integer ######
+ERROR:  syntax error at or near ")" at character 45
+ERROR:  syntax error at or near "IN" at character 43
+NOTICE:  merging multiple inherited definitions of column "aa"
+NOTICE:  merging multiple inherited definitions of column "aa"
+ERROR:  new row for relation "check_tbl" violates check constraint "check_con"
+ERROR:  new row for relation "check_tbl" violates check constraint "check_con"
+ERROR:  new row for relation "check_tbl" violates check constraint "check_con"
+ERROR:  trigger "check_fkeys2_pkey_bad" for table "fkeys2" does not exist
+ERROR:  new row for relation "check2_tbl" violates check constraint "sequence_con"
+ERROR:  new row for relation "check2_tbl" violates check constraint "sequence_con"
+ERROR:  new row for relation "check2_tbl" violates check constraint "sequence_con"
+ERROR:  new row for relation "check2_tbl" violates check constraint "sequence_con"
+ERROR:  tuple references non-existent key
+DETAIL:  Trigger "check_fkeys2_pkey_exist" found tuple referencing non-existent key in "pkeys".
+ERROR:  tuple references non-existent key
+DETAIL:  Trigger "check_fkeys_pkey_exist" found tuple referencing non-existent key in "pkeys".
+ERROR:  tuple references non-existent key
+DETAIL:  Trigger "check_fkeys_pkey2_exist" found tuple referencing non-existent key in "fkeys2".
+NOTICE:  check_pkeys_fkey_cascade: 1 tuple(s) of fkeys are deleted
+ERROR:  "check_fkeys2_fkey_restrict": tuple is referenced in "fkeys"
+CONTEXT:  SQL statement "delete from fkeys2 where fkey21 = $1 and fkey22 = $2 "
+NOTICE:  check_pkeys_fkey_cascade: 1 tuple(s) of fkeys are deleted
+NOTICE:  check_pkeys_fkey_cascade: 1 tuple(s) of fkeys2 are deleted
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "z_pkey" for table "z"
+NOTICE:  check_pkeys_fkey_cascade: 1 tuple(s) of fkeys are deleted
+ERROR:  "check_fkeys2_fkey_restrict": tuple is referenced in "fkeys"
+CONTEXT:  SQL statement "delete from fkeys2 where fkey21 = $1 and fkey22 = $2 "
+ERROR:  new row for relation "insert_tbl" violates check constraint "insert_con"
+NOTICE:  check_pkeys_fkey_cascade: 1 tuple(s) of fkeys are deleted
+NOTICE:  check_pkeys_fkey_cascade: 1 tuple(s) of fkeys2 are deleted
+ERROR:  new row for relation "insert_tbl" violates check constraint "insert_con"
+ERROR:  null value in column "aa" violates not-null constraint
+ERROR:  new row for relation "insert_tbl" violates check constraint "insert_tbl_check"
+ERROR:  new row for relation "insert_tbl" violates check constraint "insert_con"
+ERROR:  new row for relation "insert_tbl" violates check constraint "insert_tbl_check"
+ERROR:  new row for relation "insert_tbl" violates check constraint "insert_con"
+ERROR:  new row for relation "insert_tbl" violates check constraint "insert_con"
+ERROR:  new row for relation "insert_child" violates check constraint "insert_child_check"
+ERROR:  new row for relation "insert_child" violates check constraint "insert_tbl_check"
+ERROR:  new row for relation "insert_child" violates check constraint "insert_con"
+ERROR:  ttdummy (tttest): you can't change price_on and/or price_off columns (use set_ttdummy)
+ERROR:  column "xx" duplicated
+ERROR:  new row for relation "insert_tbl" violates check constraint "insert_con"
+ERROR:  new row for relation "insert_tbl" violates check constraint "insert_con"
+NOTICE:  trigger_func() called: action = INSERT, when = BEFORE, level = STATEMENT
+NOTICE:  trigger_func() called: action = INSERT, when = AFTER, level = STATEMENT
+ERROR:  new row for relation "copy_tbl" violates check constraint "copy_con"
+CONTEXT:  COPY copy_tbl, line 2: "7	check failed	6"
+NOTICE:  trigger_func() called: action = UPDATE, when = AFTER, level = ROW
+NOTICE:  trigger_func() called: action = UPDATE, when = AFTER, level = ROW
+NOTICE:  trigger_func() called: action = UPDATE, when = AFTER, level = ROW
+NOTICE:  trigger_func() called: action = UPDATE, when = AFTER, level = ROW
+NOTICE:  trigger_func() called: action = UPDATE, when = AFTER, level = STATEMENT
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "primary_tbl_pkey" for table "primary_tbl"
+NOTICE:  trigger_func() called: action = UPDATE, when = AFTER, level = STATEMENT
+NOTICE:  trigger_func() called: action = INSERT, when = BEFORE, level = STATEMENT
+NOTICE:  trigger_func() called: action = INSERT, when = AFTER, level = STATEMENT
+NOTICE:  CREATE TABLE will create implicit sequence "trigtest_i_seq" for serial column "trigtest.i"
+ERROR:  duplicate key violates unique constraint "primary_tbl_pkey"
+ERROR:  null value in column "i" violates not-null constraint
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "trigtest_pkey" for table "trigtest"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "primary_tbl_pkey" for table "primary_tbl"
+NOTICE:  trigtest INSERT BEFORE STATEMENT
+NOTICE:  trigtest INSERT BEFORE ROW
+ERROR:  null value in column "i" violates not-null constraint
+NOTICE:  trigtest INSERT AFTER ROW
+NOTICE:  trigtest INSERT AFTER STATEMENT
+NOTICE:  trigtest INSERT BEFORE STATEMENT
+NOTICE:  trigtest INSERT AFTER ROW
+NOTICE:  trigtest INSERT AFTER STATEMENT
+NOTICE:  trigtest INSERT AFTER STATEMENT
+NOTICE:  trigtest DELETE AFTER STATEMENT
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "unique_tbl_i_key" for table "unique_tbl"
+ERROR:  duplicate key violates unique constraint "unique_tbl_i_key"
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "unique_tbl_i_key" for table "unique_tbl"
+ERROR:  duplicate key violates unique constraint "unique_tbl_i_key"
+ERROR:  relation "noview" does not exist
+ERROR:  cannot change number of columns in view
+ERROR:  cannot change number of columns in view
+ERROR:  cannot change data type of view column "b"
+NOTICE:  view "v1_temp" will be a temporary view
+NOTICE:  view "v3_temp" will be a temporary view
+ERROR:  temporary tables may not specify a schema name
+ERROR:  temporary tables may not specify a schema name
+NOTICE:  view "v4_temp" will be a temporary view
+NOTICE:  view "v5_temp" will be a temporary view
+NOTICE:  view "v6_temp" will be a temporary view
+NOTICE:  view "v7_temp" will be a temporary view
+NOTICE:  view "v8_temp" will be a temporary view
+NOTICE:  view "v9_temp" will be a temporary view
+NOTICE:  view "v10_temp" will be a temporary view
+NOTICE:  view "v11_temp" will be a temporary view
+NOTICE:  view "v12_temp" will be a temporary view
+NOTICE:  view "v13_temp" will be a temporary view
+NOTICE:  view "temporal1" will be a temporary view
+NOTICE:  view "temporal2" will be a temporary view
+NOTICE:  view "temporal3" will be a temporary view
+NOTICE:  view "temporal4" will be a temporary view
+NOTICE:  view "mytempview" will be a temporary view
+NOTICE:  drop cascades to view temp_view_test.v9
+NOTICE:  drop cascades to rule _RETURN on view temp_view_test.v9
+NOTICE:  drop cascades to sequence temp_view_test.seq1
+NOTICE:  drop cascades to view temp_view_test.v8
+NOTICE:  drop cascades to rule _RETURN on view temp_view_test.v8
+NOTICE:  drop cascades to view temp_view_test.v7
+NOTICE:  drop cascades to rule _RETURN on view temp_view_test.v7
+NOTICE:  drop cascades to view temp_view_test.v6
+NOTICE:  drop cascades to rule _RETURN on view temp_view_test.v6
+NOTICE:  drop cascades to view temp_view_test.v5
+NOTICE:  drop cascades to rule _RETURN on view temp_view_test.v5
+NOTICE:  drop cascades to view temp_view_test.v4
+NOTICE:  drop cascades to rule _RETURN on view temp_view_test.v4
+NOTICE:  drop cascades to view temp_view_test.v3
+NOTICE:  drop cascades to rule _RETURN on view temp_view_test.v3
+NOTICE:  drop cascades to view temp_view_test.v2
+NOTICE:  drop cascades to rule _RETURN on view temp_view_test.v2
+NOTICE:  drop cascades to view temp_view_test.v1
+NOTICE:  drop cascades to rule _RETURN on view temp_view_test.v1
+NOTICE:  drop cascades to table temp_view_test.base_table2
+NOTICE:  drop cascades to rule _RETURN on view v5_temp
+NOTICE:  drop cascades to view v5_temp
+NOTICE:  drop cascades to table temp_view_test.base_table
+NOTICE:  drop cascades to rule _RETURN on view v9_temp
+NOTICE:  drop cascades to view v9_temp
+NOTICE:  drop cascades to rule _RETURN on view v8_temp
+NOTICE:  drop cascades to view v8_temp
+NOTICE:  drop cascades to rule _RETURN on view v6_temp
+NOTICE:  drop cascades to view v6_temp
+NOTICE:  drop cascades to rule _RETURN on view v4_temp
+NOTICE:  drop cascades to view v4_temp
+NOTICE:  drop cascades to rule _RETURN on view v2_temp
+NOTICE:  drop cascades to view v2_temp
+NOTICE:  drop cascades to rule _RETURN on view v11_temp
+NOTICE:  drop cascades to view v11_temp
+NOTICE:  drop cascades to rule _RETURN on view v12_temp
+NOTICE:  drop cascades to view v12_temp
+NOTICE:  drop cascades to rule _RETURN on view v7_temp
+NOTICE:  drop cascades to view v7_temp
+NOTICE:  drop cascades to rule _RETURN on view v10_temp
+NOTICE:  drop cascades to view v10_temp
+NOTICE:  drop cascades to view pubview
+NOTICE:  drop cascades to rule _RETURN on view pubview
+NOTICE:  drop cascades to table tbl4
+NOTICE:  drop cascades to rule _RETURN on view mytempview
+NOTICE:  drop cascades to view mytempview
+NOTICE:  drop cascades to table tbl3
+NOTICE:  drop cascades to table tbl2
+NOTICE:  drop cascades to table tbl1
+NOTICE:  drop cascades to view nontemp4
+NOTICE:  drop cascades to rule _RETURN on view nontemp4
+NOTICE:  drop cascades to view nontemp3
+NOTICE:  drop cascades to rule _RETURN on view nontemp3
+NOTICE:  drop cascades to view nontemp2
+NOTICE:  drop cascades to rule _RETURN on view nontemp2
+NOTICE:  drop cascades to view nontemp1
+NOTICE:  drop cascades to rule _RETURN on view nontemp1
+NOTICE:  drop cascades to table t2
+NOTICE:  drop cascades to table t1
+NOTICE:  drop cascades to rule _RETURN on view temporal4
+NOTICE:  drop cascades to view temporal4
+NOTICE:  drop cascades to rule _RETURN on view temporal3
+NOTICE:  drop cascades to view temporal3
+NOTICE:  drop cascades to rule _RETURN on view temporal2
+NOTICE:  drop cascades to view temporal2
+NOTICE:  drop cascades to rule _RETURN on view temporal1
+NOTICE:  drop cascades to view temporal1
+ERROR:  relation "six_wrong" does not exist
+ERROR:  duplicate key violates unique constraint "func_index_index"
+ERROR:  duplicate key violates unique constraint "func_index_index"
+LOG:  transaction ID wrap limit is 1073745207, limited by database "regression"
+LOG:  transaction ID wrap limit is 1073745207, limited by database "regression"
+ERROR:  syntax error at or near ";" at character 7
+ERROR:  relation "nonesuch" does not exist
+ERROR:  syntax error at or near "from" at character 8
+ERROR:  column "nonesuch" does not exist
+ERROR:  column "nonesuch" does not exist
+ERROR:  column "nonesuch" does not exist
+ERROR:  syntax error at or near "from" at character 29
+ERROR:  column "foobar" does not exist
+ERROR:  syntax error at or near ";" at character 12
+ERROR:  relation "nonesuch" does not exist
+ERROR:  syntax error at or near ";" at character 11
+ERROR:  table "nonesuch" does not exist
+ERROR:  syntax error at or near ";" at character 19
+ERROR:  relation "nonesuch" does not exist
+ERROR:  relation "nonesuch" does not exist
+ERROR:  relation "aggtest" already exists
+ERROR:  relation "stud_emp" already exists
+ERROR:  relation "nonesuchrel" does not exist
+ERROR:  column "nonesuchatt" does not exist
+ERROR:  column "manager" of relation "stud_emp" already exists
+ERROR:  column "oid" of relation "stud_emp" already exists
+WARNING:  there is no transaction in progress
+WARNING:  there is no transaction in progress
+ERROR:  function int2um(integer) does not exist
+ERROR:  aggregate basetype must be specified
+ERROR:  syntax error at or near ";" at character 11
+ERROR:  syntax error at or near "314159" at character 12
+ERROR:  index "nonesuch" does not exist
+ERROR:  syntax error at or near ";" at character 15
+ERROR:  syntax error at or near ";" at character 23
+ERROR:  syntax error at or near "314159" at character 16
+ERROR:  type "nonesuch" does not exist
+ERROR:  aggregate nonesuch(integer) does not exist
+ERROR:  aggregate newcnt(real) does not exist
+ERROR:  syntax error at or near "(" at character 15
+ERROR:  syntax error at or near "314159" at character 15
+ERROR:  function nonesuch() does not exist
+ERROR:  syntax error at or near ";" at character 10
+ERROR:  syntax error at or near "314159" at character 11
+ERROR:  type "nonesuch" does not exist
+ERROR:  syntax error at or near ";" at character 14
+ERROR:  syntax error at or near ";" at character 21
+ERROR:  syntax error at or near ";" at character 18
+ERROR:  syntax error at or near "," at character 19
+ERROR:  syntax error at or near "(" at character 15
+ERROR:  syntax error at or near ")" at character 20
+ERROR:  missing argument
+HINT:  Use NONE to denote the missing argument of a unary operator.
+ERROR:  operator does not exist: integer === integer
+ERROR:  missing argument
+HINT:  Use NONE to denote the missing argument of a unary operator.
+ERROR:  syntax error at or near "," at character 19
+ERROR:  type nonesuch does not exist
+ERROR:  type nonesuch does not exist
+ERROR:  syntax error at or near ")" at character 24
+ERROR:  syntax error at or near ";" at character 10
+ERROR:  syntax error at or near "314159" at character 11
+ERROR:  relation "noplace" does not exist
+ERROR:  syntax error at or near "tuple" at character 6
+ERROR:  syntax error at or near "instance" at character 6
+ERROR:  syntax error at or near "rewrite" at character 6
+ERROR:  division by zero
+ERROR:  division by zero
+ERROR:  division by zero
+ERROR:  division by zero
+ERROR:  division by zero
+ERROR:  division by zero
+ERROR:  division by zero
+ERROR:  division by zero
+ERROR:  division by zero
+ERROR:  division by zero
+ERROR:  division by zero
+ERROR:  syntax error at or near "xxx" at character 1
+ERROR:  syntax error at or near "foo" at character 8
+ERROR:  syntax error at or near ";" at character 14
+ERROR:  syntax error at end of input at character 13
+ERROR:  syntax error at or near "foo" at character 29
+ERROR:  syntax error at or near "123" at character 13
+ERROR:  syntax error at or near "123" at character 30
+ERROR:  syntax error at or near "NUL" at character 94
+ERROR:  syntax error at or near "NUL" at character 90
+ERROR:  syntax error at or near "NUL" at character 35
+ERROR:  syntax error at or near "NUL" at character 90
+ERROR:  syntax error at or near "NUL" at character 101
+ERROR:  syntax error at or near "NUL" at character 47
+ERROR:  syntax error at or near "NUL" at character 157
+ERROR:  syntax error at or near "NUL" at character 190
+ERROR:  stack depth limit exceeded
+HINT:  Increase the configuration parameter "max_stack_depth".
+CONTEXT:  SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+	SQL function "infinite_recurse" statement 1
+ERROR:  SELECT DISTINCT ON expressions must match initial ORDER BY expressions
+NOTICE:  CREATE TABLE will create implicit sequence "abc_a_seq" for serial column "abc.a"
+ERROR:  column "q2" does not exist
+ERROR:  cursor can only scan forward
+HINT:  Declare it with SCROLL option to enable backward scan.
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "abc_b_key" for table "abc"
+ERROR:  aggregates not allowed in WHERE clause
+ERROR:  column "test_missing_target.b" must appear in the GROUP BY clause or be used in an aggregate function
+ERROR:  GROUP BY position 3 is not in select list
+ERROR:  column reference "b" is ambiguous
+ERROR:  value too long for type character(5)
+ERROR:  column "test_missing_target.b" must appear in the GROUP BY clause or be used in an aggregate function
+ERROR:  column reference "b" is ambiguous
+ERROR:  column reference "b" is ambiguous
+ERROR:  transaction is read-only
+ERROR:  transaction is read-only
+ERROR:  transaction is read-only
+ERROR:  transaction is read-only
+ERROR:  division by zero
+ERROR:  transaction identifier "foo3" is already in use
+NOTICE:  drop cascades to view test_schema_1.abc_view
+NOTICE:  drop cascades to rule _RETURN on view test_schema_1.abc_view
+NOTICE:  drop cascades to table test_schema_1.abc
+ERROR:  column "test_having.a" must appear in the GROUP BY clause or be used in an aggregate function
+ERROR:  column "test_having.a" must appear in the GROUP BY clause or be used in an aggregate function
+ERROR:  relation "bar" does not exist
+ERROR:  relation "bar" does not exist
+ERROR:  column "foo" does not exist
+ERROR:  column reference "i" is ambiguous
+ERROR:  op ANY/ALL (array) requires operator to yield boolean
+ERROR:  op ANY/ALL (array) requires array on right side
+ERROR:  UNION JOIN is not implemented
+WARNING:  there is no transaction in progress
+WARNING:  there is no transaction in progress
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "arr_tbl_f1_key" for table "arr_tbl"
+NOTICE:  drop cascades to rule _RETURN on view orders_view
+NOTICE:  drop cascades to view orders_view
+ERROR:  column "foo" does not exist
+ERROR:  cursor "foo" does not exist
+ERROR:  relation "pxtest2" does not exist
+ERROR:  duplicate key violates unique constraint "arr_tbl_f1_key"
+ERROR:  malformed array literal: "{{1,{2}},{2,3}}"
+ERROR:  malformed array literal: "{{},{}}"
+ERROR:  malformed array literal: "{{1,2},\{2,3}}"
+ERROR:  malformed array literal: "{{"1 2" x},{3}}"
+ERROR:  malformed array literal: "{}}"
+ERROR:  malformed array literal: "{ }}"
+ERROR:  SAVEPOINT may only be used in transaction blocks
+ERROR:  ROLLBACK TO SAVEPOINT may only be used in transaction blocks
+ERROR:  RELEASE SAVEPOINT may only be used in transaction blocks
+ERROR:  division by zero
+ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ERROR:  division by zero
+ERROR:  portal "c" cannot be run
+ERROR:  portal "c" cannot be run
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "koju_a_key" for table "koju"
+ERROR:  duplicate key violates unique constraint "koju_a_key"
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "koju_a_key" for table "koju"
+ERROR:  duplicate key violates unique constraint "koju_a_key"
+ERROR:  cursor "foo" does not exist
+ERROR:  canceling statement due to statement timeout
+ERROR:  canceling statement due to statement timeout
+ERROR:  relation "pxtest3" does not exist
+ERROR:  role "regressuser4" already exists
+NOTICE:  role "regressuser2" is already a member of role "regressgroup2"
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest2
+WARNING:  no privileges were granted
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest1
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest1
+ERROR:  permission denied for relation atest1
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest1
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atest3
+ERROR:  permission denied for relation atest2
+ERROR:  permission denied for relation atestv2
+ERROR:  permission denied for relation atestv3
+ERROR:  permission denied for relation atest2
+ERROR:  language "c" is not trusted
+HINT:  Only superusers may use untrusted languages.
+WARNING:  no privileges were granted
+ERROR:  invalid privilege type USAGE for function
+ERROR:  function testfunc_nosuch(integer) does not exist
+ERROR:  permission denied for language sql
+ERROR:  permission denied for function testfunc1
+ERROR:  permission denied for relation atest2
+ERROR:  must be owner of function testfunc1
+ERROR:  relation "pg_shad" does not exist
+ERROR:  role "nosuchuser" does not exist
+ERROR:  unrecognized privilege type: "sel"
+ERROR:  role with OID 4293967297 does not exist
+ERROR:  relation with OID 1 does not exist
+WARNING:  no privileges were granted
+ERROR:  dependent privileges exist
+HINT:  Use CASCADE to revoke them too.
+NOTICE:  drop cascades to rule _RETURN on view atestv4
+NOTICE:  drop cascades to view atestv4
+ERROR:  view "atestv4" does not exist
+NOTICE:  merging definition of column "a" for child "d_star"
+NOTICE:  CREATE TABLE will create implicit sequence "clstr_tst_s_rf_a_seq" for serial column "clstr_tst_s.rf_a"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "clstr_tst_s_pkey" for table "clstr_tst_s"
+ERROR:  rule "rtest_v1_bad" for relation "rtest_v1" does not exist
+NOTICE:  CREATE TABLE will create implicit sequence "deptest_f1_seq" for serial column "deptest.f1"
+NOTICE:  CREATE TABLE will create implicit sequence "clstr_tst_a_seq" for serial column "clstr_tst.a"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "fktable_ftest1_fkey"
+DETAIL:  Key (ftest1)=(100) is not present in table "pktable".
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "deptest_pkey" for table "deptest"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "clstr_tst_pkey" for table "clstr_tst"
+ERROR:  role "regression_user" cannot be dropped because some objects depend on it
+DETAIL:  access to table deptest
+ERROR:  role "regression_group" cannot be dropped because some objects depend on it
+DETAIL:  access to table deptest
+ERROR:  role "regression_user" cannot be dropped because some objects depend on it
+DETAIL:  access to table deptest
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  constraint "constrname_wrong" for table "fktable" does not exist
+ERROR:  role "regression_user3" cannot be dropped because some objects depend on it
+DETAIL:  owner of type deptest_f1_seq
+	owner of sequence deptest_f1_seq
+	owner of index pg_toast.pg_toast_27487_index
+	owner of type pg_toast.pg_toast_27487
+	owner of toast table pg_toast.pg_toast_27487
+	owner of index deptest_pkey
+	owner of type deptest
+	owner of table deptest
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname"
+DETAIL:  Key (ftest1,ftest2)=(100,2) is not present in table "pktable".
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname"
+DETAIL:  Key (ftest1,ftest2)=(2,2) is not present in table "pktable".
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname"
+DETAIL:  MATCH FULL does not allow mixing of null and nonnull key values.
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname"
+DETAIL:  MATCH FULL does not allow mixing of null and nonnull key values.
+NOTICE:  drop cascades to constraint constrname on table fktable
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  insert or update on table "clstr_tst" violates foreign key constraint "clstr_tst_con"
+DETAIL:  Key (b)=(1111) is not present in table "clstr_tst_s".
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "clstr_1_pkey" for table "clstr_1"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname2"
+DETAIL:  Key (ftest1,ftest2)=(100,2) is not present in table "pktable".
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname2"
+DETAIL:  Key (ftest1,ftest2)=(2,2) is not present in table "pktable".
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname2"
+DETAIL:  MATCH FULL does not allow mixing of null and nonnull key values.
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname2"
+DETAIL:  MATCH FULL does not allow mixing of null and nonnull key values.
+NOTICE:  constraint constrname2 on table fktable depends on table pktable
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "clstr_2_pkey" for table "clstr_2"
+ERROR:  cannot drop table pktable because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+NOTICE:  drop cascades to constraint constrname2 on table fktable
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "clstr_3_pkey" for table "clstr_3"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  there is no previously clustered index for table "clstr_2"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "fktable_ftest1_fkey"
+DETAIL:  Key (ftest1)=(100) is not present in table "pktable".
+ERROR:  update or delete on "pktable" violates foreign key constraint "fktable_ftest1_fkey" on "fktable"
+DETAIL:  Key (ptest1)=(1) is still referenced from table "fktable".
+ERROR:  update or delete on "pktable" violates foreign key constraint "fktable_ftest1_fkey" on "fktable"
+DETAIL:  Key (ptest1)=(2) is still referenced from table "fktable".
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname3"
+DETAIL:  Key (ftest1,ftest2,ftest3)=(1,2,7) is not present in table "pktable".
+ERROR:  update or delete on "pktable" violates foreign key constraint "constrname3" on "fktable"
+DETAIL:  Key (ptest1,ptest2,ptest3)=(1,2,3) is still referenced from table "fktable".
+ERROR:  update or delete on "pktable" violates foreign key constraint "constrname3" on "fktable"
+DETAIL:  Key (ptest1,ptest2,ptest3)=(1,2,3) is still referenced from table "fktable".
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname3"
+DETAIL:  Key (ftest1,ftest2,ftest3)=(1,2,7) is not present in table "pktable".
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname3"
+DETAIL:  Key (ftest1,ftest2,ftest3)=(1,2,7) is not present in table "pktable".
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname3"
+DETAIL:  Key (ftest1,ftest2,ftest3)=(1,2,7) is not present in table "pktable".
+ERROR:  insert or update on table "fktable" violates foreign key constraint "constrname3"
+DETAIL:  Key (ftest1,ftest2,ftest3)=(1,-1,3) is not present in table "pktable".
+CONTEXT:  SQL statement "UPDATE ONLY "public"."fktable" SET "ftest2" = DEFAULT WHERE "ftest1" = $1 AND "ftest2" = $2 AND "ftest3" = $3"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  column "ftest2" referenced in foreign key constraint does not exist
+ERROR:  column "ptest2" referenced in foreign key constraint does not exist
+ERROR:  table "fktable_fail1" does not exist
+ERROR:  table "fktable_fail2" does not exist
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "pktable_ptest1_key" for table "pktable"
+ERROR:  there is no unique constraint matching given keys for referenced table "pktable"
+ERROR:  table "fktable_fail1" does not exist
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "ptest1" are of incompatible types: inet and integer.
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "ptest1" are of incompatible types: inet and integer.
+WARNING:  foreign key constraint "fktable_ftest1_fkey" will require costly sequential scans
+DETAIL:  Key columns "ftest1" and "ptest1" are of different types: character varying and integer.
+ERROR:  column "f1" does not exist
+WARNING:  foreign key constraint "fktable_ftest1_fkey" will require costly sequential scans
+DETAIL:  Key columns "ftest1" and "ptest1" are of different types: character varying and integer.
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "ptest1" are of incompatible types: cidr and integer.
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "ptest1" are of incompatible types: cidr and integer.
+ERROR:  foreign key constraint "fktable_ftest2_fkey" cannot be implemented
+DETAIL:  Key columns "ftest2" and "ptest1" are of incompatible types: inet and integer.
+ERROR:  foreign key constraint "fktable_ftest2_fkey" cannot be implemented
+DETAIL:  Key columns "ftest2" and "ptest1" are of incompatible types: inet and integer.
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "ptest2" are of incompatible types: integer and inet.
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  foreign key constraint "pktable_ptest3_fkey" cannot be implemented
+DETAIL:  Key columns "ptest3" and "ptest2" are of incompatible types: integer and inet.
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "rule_and_refint_t1_pkey" for table "rule_and_refint_t1"
+ERROR:  foreign key constraint "pktable_ptest4_fkey" cannot be implemented
+DETAIL:  Key columns "ptest4" and "ptest1" are of incompatible types: inet and integer.
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "rule_and_refint_t2_pkey" for table "rule_and_refint_t2"
+ERROR:  foreign key constraint "pktable_ptest4_fkey" cannot be implemented
+DETAIL:  Key columns "ptest4" and "ptest1" are of incompatible types: inet and integer.
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "rule_and_refint_t3_pkey" for table "rule_and_refint_t3"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "pktable_base1_key" for table "pktable"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "fktable_ftest1_fkey"
+DETAIL:  Key (ftest1)=(3) is not present in table "pktable".
+ERROR:  update or delete on "pktable" violates foreign key constraint "fktable_ftest1_fkey" on "fktable"
+DETAIL:  Key (base1)=(3) is still referenced from table "fktable".
+ERROR:  update or delete on "pktable" violates foreign key constraint "fktable_ftest1_fkey" on "fktable"
+DETAIL:  Key (base1)=(3) is still referenced from table "fktable".
+ERROR:  insert or update on table "rule_and_refint_t3" violates foreign key constraint "rule_and_refint_t3_id3a_fkey1"
+DETAIL:  Key (id3a,id3c)=(1,13) is not present in table "rule_and_refint_t2".
+ERROR:  insert or update on table "rule_and_refint_t3" violates foreign key constraint "rule_and_refint_t3_id3a_fkey"
+DETAIL:  Key (id3a,id3b)=(1,13) is not present in table "rule_and_refint_t1".
+ERROR:  insert or update on table "rule_and_refint_t3" violates foreign key constraint "rule_and_refint_t3_id3a_fkey1"
+DETAIL:  Key (id3a,id3c)=(1,13) is not present in table "rule_and_refint_t2".
+ERROR:  insert or update on table "rule_and_refint_t3" violates foreign key constraint "rule_and_refint_t3_id3a_fkey"
+DETAIL:  Key (id3a,id3b)=(1,13) is not present in table "rule_and_refint_t1".
+NOTICE:  CREATE TABLE will create implicit sequence "id_id_seq" for serial column "id.id"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "fktable_ftest1_fkey"
+DETAIL:  Key (ftest1,ftest2)=(3,1) is not present in table "pktable".
+ERROR:  update or delete on "pktable" violates foreign key constraint "fktable_ftest1_fkey" on "fktable"
+DETAIL:  Key (base1,ptest1)=(3,1) is still referenced from table "fktable".
+ERROR:  update or delete on "pktable" violates foreign key constraint "fktable_ftest1_fkey" on "fktable"
+DETAIL:  Key (base1,ptest1)=(3,1) is still referenced from table "fktable".
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "id_pkey" for table "id"
+NOTICE:  merging column "id" with inherited definition
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  insert or update on table "pktable" violates foreign key constraint "pktable_base2_fkey"
+DETAIL:  Key (base2,ptest2)=(3,2) is not present in table "pktable".
+ERROR:  update or delete on "pktable" violates foreign key constraint "pktable_base2_fkey" on "pktable"
+DETAIL:  Key (base1,ptest1)=(2,2) is still referenced from table "pktable".
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "test_1_pkey" for table "test_1"
+ERROR:  update or delete on "pktable" violates foreign key constraint "pktable_base2_fkey" on "pktable"
+DETAIL:  Key (base1,ptest1)=(1,1) is still referenced from table "pktable".
+NOTICE:  merging column "id" with inherited definition
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "test_2_pkey" for table "test_2"
+NOTICE:  merging column "id" with inherited definition
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "test_3_pkey" for table "test_3"
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "base1" are of incompatible types: cidr and integer.
+NOTICE:  drop cascades to table test_3
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "base1" are of incompatible types: cidr and integer.
+NOTICE:  drop cascades to table test_2
+NOTICE:  drop cascades to table test_1
+ERROR:  foreign key constraint "fktable_ftest2_fkey" cannot be implemented
+DETAIL:  Key columns "ftest2" and "base1" are of incompatible types: inet and integer.
+NOTICE:  drop cascades to rule update_id_ordered on view id_ordered
+NOTICE:  drop cascades to rule _RETURN on view id_ordered
+NOTICE:  drop cascades to view id_ordered
+ERROR:  foreign key constraint "fktable_ftest2_fkey" cannot be implemented
+DETAIL:  Key columns "ftest2" and "base1" are of incompatible types: inet and integer.
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "ptest1" are of incompatible types: integer and inet.
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  foreign key constraint "pktable_base2_fkey" cannot be implemented
+DETAIL:  Key columns "ptest2" and "ptest1" are of incompatible types: inet[] and inet.
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  foreign key constraint "pktable_base2_fkey" cannot be implemented
+DETAIL:  Key columns "base2" and "ptest1" are of incompatible types: integer and inet.
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  foreign key constraint "pktable_ptest2_fkey" cannot be implemented
+DETAIL:  Key columns "ptest2" and "base1" are of incompatible types: inet and integer.
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  foreign key constraint "pktable_ptest2_fkey" cannot be implemented
+DETAIL:  Key columns "ptest2" and "base1" are of incompatible types: inet and integer.
+ERROR:  table "pktable" does not exist
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "fktable_pkey" for table "fktable"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "fktable_fk_fkey"
+DETAIL:  Key (fk)=(10) is not present in table "pktable".
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "fktable_pkey" for table "fktable"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "fktable_fk_fkey"
+DETAIL:  Key (fk)=(1000) is not present in table "pktable".
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "fktable_pkey" for table "fktable"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "fktable_fk_fkey"
+DETAIL:  Key (fk)=(2000) is not present in table "pktable".
+ERROR:  current transaction is aborted, commands ignored until end of transaction block
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "fktable_pkey" for table "fktable"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "fktable_fk_fkey"
+DETAIL:  Key (fk)=(200) is not present in table "pktable".
+NOTICE:  drop cascades to constraint fktable_fk_fkey on table fktable
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "pktable_id2_key" for table "pktable"
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "pktable_id3_key" for table "pktable"
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "pktable_id1_key" for table "pktable"
+WARNING:  foreign key constraint "fk_2_3" will require costly sequential scans
+DETAIL:  Key columns "x2" and "id3" are of different types: character varying and real.
+WARNING:  foreign key constraint "fk_2_1" will require costly sequential scans
+DETAIL:  Key columns "x2" and "id1" are of different types: character varying and integer.
+WARNING:  foreign key constraint "fk_3_1" will require costly sequential scans
+DETAIL:  Key columns "x3" and "id1" are of different types: real and integer.
+WARNING:  foreign key constraint "fk_123_231" will require costly sequential scans
+DETAIL:  Key columns "x2" and "id3" are of different types: character varying and real.
+WARNING:  foreign key constraint "fk_123_231" will require costly sequential scans
+DETAIL:  Key columns "x3" and "id1" are of different types: real and integer.
+WARNING:  foreign key constraint "fk_241_132" will require costly sequential scans
+DETAIL:  Key columns "x2" and "id1" are of different types: character varying and integer.
+WARNING:  foreign key constraint "fk_241_132" will require costly sequential scans
+DETAIL:  Key columns "x4" and "id3" are of different types: text and real.
+NOTICE:  drop cascades to constraint fk_241_132 on table fktable
+NOTICE:  drop cascades to constraint fk_123_231 on table fktable
+NOTICE:  drop cascades to constraint fk_253_213 on table fktable
+NOTICE:  drop cascades to constraint fk_213_213 on table fktable
+NOTICE:  drop cascades to constraint fk_123_123 on table fktable
+NOTICE:  drop cascades to constraint fk_5_1 on table fktable
+NOTICE:  drop cascades to constraint fk_3_1 on table fktable
+NOTICE:  drop cascades to constraint fk_2_1 on table fktable
+NOTICE:  drop cascades to constraint fktable_x1_fkey on table fktable
+NOTICE:  drop cascades to constraint fk_4_2 on table fktable
+NOTICE:  drop cascades to constraint fk_1_2 on table fktable
+NOTICE:  drop cascades to constraint fktable_x2_fkey on table fktable
+NOTICE:  drop cascades to constraint fk_1_3 on table fktable
+NOTICE:  drop cascades to constraint fk_2_3 on table fktable
+NOTICE:  drop cascades to constraint fktable_x3_fkey on table fktable
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "fktable_pkey" for table "fktable"
+ERROR:  insert or update on table "fktable" violates foreign key constraint "fktable_fk_fkey"
+DETAIL:  Key (fk)=(20) is not present in table "pktable".
+NOTICE:  CREATE TABLE will create implicit sequence "x_a_seq" for serial column "x.a"
+ERROR:  "domaindroptest" is not a valid base type for a domain
+ERROR:  type "domaindroptest" does not exist
+NOTICE:  CREATE TABLE will create implicit sequence "serialtest_f2_seq" for serial column "serialtest.f2"
+ERROR:  prepared statement "q1" already exists
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "truncate_a_pkey" for table "truncate_a"
+ERROR:  relation "tmp_wrong" does not exist
+ERROR:  wrong number of parameters for prepared statement "q3"
+DETAIL:  Expected 6 parameters but got 1.
+ERROR:  wrong number of parameters for prepared statement "q3"
+DETAIL:  Expected 6 parameters but got 7.
+ERROR:  parameter $3 of type boolean cannot be coerced to the expected type double precision
+HINT:  You will need to rewrite or cast the expression.
+ERROR:  type "nonexistenttype" does not exist
+ERROR:  conversion "myconv" already exists
+ERROR:  default conversion for LATIN1 to UTF8 already exists
+ERROR:  conversion "myconv_bad" does not exist
+ERROR:  value too long for type character varying(5)
+ERROR:  function expression in FROM may not refer to other relations of same query level
+ERROR:  value too long for type character varying(5)
+CONTEXT:  COPY basictest, line 1: "notsoshorttext"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "foo_pkey" for table "foo"
+ERROR:  malformed record literal: "(Joe)"
+DETAIL:  Too few columns.
+ERROR:  malformed record literal: "(Joe,,)"
+DETAIL:  Too many columns.
+ERROR:  null value in column "f2" violates not-null constraint
+ERROR:  missing FROM-clause entry for table "q"
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  column "xyz" of relation "x" does not exist
+ERROR:  column "d" specified more than once
+ERROR:  invalid input syntax for integer: ""
+CONTEXT:  COPY x, line 1, column a: ""
+ERROR:  missing data for column "e"
+CONTEXT:  COPY x, line 1: "2000	230	23	23"
+ERROR:  missing data for column "e"
+CONTEXT:  COPY x, line 1: "2001	231	\N	\N"
+ERROR:  extra data after last expected column
+CONTEXT:  COPY x, line 1: "2002	232	40	50	60	70	80"
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  function tfnp(integer[], anyelement) does not exist
+NOTICE:  CREATE TABLE will create implicit sequence "trunc_c_a_seq" for serial column "trunc_c.a"
+ERROR:  cannot alter table "fullname" because column "people"."fn" uses its rowtype
+ERROR:  table "no_oids" does not have OIDs
+ERROR:  table "no_oids" does not have OIDs
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "trunc_c_pkey" for table "trunc_c"
+ERROR:  relation "temptest" does not exist
+ERROR:  function tf1p(integer[], anyelement) does not exist
+ERROR:  function tf1p(integer[], anyelement) does not exist
+ERROR:  function tfp(integer[], anyelement) does not exist
+ERROR:  function tfp(integer[], anyelement) does not exist
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  function tfnp(anyarray, anyelement) does not exist
+ERROR:  function tf2p(anyarray, anyelement) does not exist
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  function tf1p(anyarray, anyelement) does not exist
+ERROR:  function tf1p(anyarray, anyelement) does not exist
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+NOTICE:  CREATE TABLE will create implicit sequence "t1_f1_seq" for serial column "t1.f1"
+ERROR:  relation "temptest" does not exist
+ERROR:  ON COMMIT can only be used on temporary tables
+ERROR:  function tfnp(integer[], anyelement) does not exist
+ERROR:  function tfnp(integer[], anyelement) does not exist
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "temptest1_pkey" for table "temptest1"
+ERROR:  cannot truncate a table referenced in a foreign key constraint
+DETAIL:  Table "trunc_b" references "truncate_a" via foreign key constraint "trunc_b_a_fkey".
+HINT:  Truncate table "trunc_b" at the same time.
+ERROR:  cannot truncate a table referenced in a foreign key constraint
+DETAIL:  Table "trunc_e" references "truncate_a" via foreign key constraint "trunc_e_a_fkey".
+HINT:  Truncate table "trunc_e" at the same time.
+ERROR:  cannot drop sequence t1_f1_seq because table t1 column f1 requires it
+HINT:  You may drop table t1 column f1 instead.
+ERROR:  function tf1p(integer[], anyelement) does not exist
+ERROR:  function tfp(integer[], anyelement) does not exist
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  function tfnp(anyarray, anyelement) does not exist
+ERROR:  function tfnp(anyarray, anyelement) does not exist
+ERROR:  function tf2p(anyarray, anyelement) does not exist
+ERROR:  function tf2p(anyarray, anyelement) does not exist
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  cannot determine transition data type
+DETAIL:  An aggregate using "anyarray" or "anyelement" as transition type must have one of them as its base type.
+ERROR:  function tf1p(anyarray, anyelement) does not exist
+ERROR:  function ffnp(anyarray) does not exist
+NOTICE:  default for table t1 column f2 depends on sequence myseq2
+ERROR:  cannot drop sequence myseq2 because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+ERROR:  cannot truncate a table referenced in a foreign key constraint
+DETAIL:  Table "trunc_b" references "truncate_a" via foreign key constraint "trunc_b_a_fkey".
+HINT:  Truncate table "trunc_b" at the same time.
+ERROR:  cannot truncate a table referenced in a foreign key constraint
+DETAIL:  Table "trunc_d" references "trunc_c" via foreign key constraint "trunc_d_a_fkey".
+HINT:  Truncate table "trunc_d" at the same time.
+ERROR:  cannot truncate a table referenced in a foreign key constraint
+DETAIL:  Table "trunc_e" references "trunc_c" via foreign key constraint "trunc_e_b_fkey".
+HINT:  Truncate table "trunc_e" at the same time.
+ERROR:  domain dnotnull does not allow null values
+ERROR:  sequence "t1_f1_seq" does not exist
+ERROR:  domain dcheck does not allow null values
+ERROR:  new row for relation "nulltest" violates check constraint "nulltest_col5_check"
+ERROR:  domain dnotnull does not allow null values
+ERROR:  domain dnotnull does not allow null values
+ERROR:  null value in column "col3" violates not-null constraint
+ERROR:  domain dcheck does not allow null values
+CONTEXT:  COPY nulltest, line 1: "a	b	\N	d	\N"
+ERROR:  new row for relation "nulltest" violates check constraint "nulltest_col5_check"
+CONTEXT:  COPY nulltest, line 3: "a	b	c	\N	a"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "temptest3_pkey" for table "temptest3"
+ERROR:  domain dnotnull does not allow null values
+ERROR:  domain dnotnull does not allow null values
+ERROR:  domain dnotnull does not allow null values
+ERROR:  cannot truncate a table referenced in a foreign key constraint
+DETAIL:  Table "trunc_b" references "truncate_a" via foreign key constraint "trunc_b_a_fkey".
+HINT:  Truncate table "trunc_b" at the same time.
+ERROR:  unsupported ON COMMIT and foreign key combination
+DETAIL:  Table "temptest4" references "temptest3" via foreign key constraint "temptest4_col_fkey", but they do not have the same ON COMMIT setting.
+ERROR:  relation "asdf" does not exist
+ERROR:  lastval is not yet defined in this session
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "defaulttest_pkey" for table "defaulttest"
+ERROR:  permission denied for sequence seq3
+ERROR:  cannot truncate a table referenced in a foreign key constraint
+DETAIL:  Table "trunc_d" references "trunc_c" via foreign key constraint "trunc_d_a_fkey".
+HINT:  Truncate table "trunc_d" at the same time.
+ERROR:  cannot truncate a table referenced in a foreign key constraint
+DETAIL:  Table "trunc_e" references "trunc_c" via foreign key constraint "trunc_e_b_fkey".
+HINT:  Truncate table "trunc_e" at the same time.
+ERROR:  cannot truncate a table referenced in a foreign key constraint
+DETAIL:  Table "truncate_a" references "trunc_c" via foreign key constraint "truncate_a_col1_fkey".
+HINT:  Truncate table "truncate_a" at the same time.
+ERROR:  cannot truncate a table referenced in a foreign key constraint
+DETAIL:  Table "trunc_b" references "truncate_a" via foreign key constraint "trunc_b_a_fkey".
+HINT:  Truncate table "trunc_b" at the same time.
+ERROR:  column "oid" does not exist
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "foorescan_pkey" for table "foorescan"
+ERROR:  relation "tmp" does not exist
+ERROR:  column "col1" of table "domnotnull" contains null values
+NOTICE:  drop cascades to constraint trunc_e_a_fkey on table trunc_e
+NOTICE:  drop cascades to constraint trunc_b_a_fkey on table trunc_b
+NOTICE:  drop cascades to constraint trunc_e_b_fkey on table trunc_e
+NOTICE:  drop cascades to constraint trunc_d_a_fkey on table trunc_d
+ERROR:  column "col2" of table "domnotnull" contains null values
+ERROR:  domain dnotnulltest does not allow null values
+NOTICE:  drop cascades to table domnotnull column col2
+NOTICE:  drop cascades to table domnotnull column col1
+ERROR:  column "oid" does not exist
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "tmp2_pkey" for table "tmp2"
+ERROR:  function tg_hub_adjustslots_wrong(character, integer, integer) does not exist
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "tmp4_a_key" for table "tmp4"
+ERROR:  column "col1" of table "domcontest" contains values that violate the new constraint
+ERROR:  value for domain con violates check constraint "con_check"
+ERROR:  value for domain con violates check constraint "t"
+ERROR:  value for domain con violates check constraint "con_check"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "barrescan_pkey" for table "barrescan"
+ERROR:  domain dom does not allow null values
+ERROR:  value for domain dom violates check constraint "domchkgt6"
+ERROR:  column "c" referenced in foreign key constraint does not exist
+ERROR:  column "b" referenced in foreign key constraint does not exist
+ERROR:  insert or update on table "tmp3" violates foreign key constraint "tmpconstr"
+DETAIL:  Key (a)=(5) is not present in table "tmp2".
+ERROR:  there is no unique constraint matching given keys for referenced table "tmp4"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "ptest1" are of incompatible types: inet and integer.
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "ptest1" are of incompatible types: inet and integer.
+ERROR:  function result type must be integer because of OUT parameters
+ERROR:  function result type must be record because of OUT parameters
+ERROR:  cannot change return type of existing function
+HINT:  Use DROP FUNCTION first.
+ERROR:  domain str_domain does not allow null values
+WARNING:  foreign key constraint "fktable_ftest1_fkey" will require costly sequential scans
+DETAIL:  Key columns "ftest1" and "ptest1" are of different types: character varying and integer.
+ERROR:  could not determine anyarray/anyelement type because input has type "unknown"
+WARNING:  foreign key constraint "fktable_ftest1_fkey1" will require costly sequential scans
+DETAIL:  Key columns "ftest1" and "ptest1" are of different types: character varying and integer.
+ERROR:  value for domain str_domain2 violates check constraint "str_domain2_check"
+NOTICE:  drop cascades to constraint fktable_ftest1_fkey1 on table fktable
+NOTICE:  drop cascades to constraint fktable_ftest1_fkey on table fktable
+ERROR:  cannot determine result data type
+DETAIL:  A function returning "anyarray" or "anyelement" must have at least one argument of either type.
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "pktable_pkey" for table "pktable"
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "ptest1" are of incompatible types: cidr and integer.
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "ptest1" are of incompatible types: cidr and integer.
+ERROR:  foreign key constraint "fktable_ftest1_fkey" cannot be implemented
+DETAIL:  Key columns "ftest1" and "ptest2" are of incompatible types: integer and inet.
+ERROR:  foreign key constraint "fktable_ftest2_fkey" cannot be implemented
+DETAIL:  Key columns "ftest2" and "ptest1" are of incompatible types: inet and integer.
+ERROR:  new row for relation "atacc1" violates check constraint "atacc_test1"
+ERROR:  check constraint "atacc_test1" is violated by some row
+ERROR:  column "test1" does not exist
+ERROR:  new row for relation "atacc1" violates check constraint "atacc_test1"
+ERROR:  new row for relation "atacc1" violates check constraint "atacc1_check"
+ERROR:  new row for relation "atacc2" violates check constraint "foo"
+ERROR:  new row for relation "atacc3" violates check constraint "foo"
+ERROR:  new row for relation "atacc2" violates check constraint "foo"
+NOTICE:  ALTER TABLE / ADD UNIQUE will create implicit index "atacc_test1" for table "atacc1"
+ERROR:  duplicate key violates unique constraint "atacc_test1"
+NOTICE:  ALTER TABLE / ADD UNIQUE will create implicit index "atacc_oid1" for table "atacc1"
+NOTICE:  ALTER TABLE / ADD UNIQUE will create implicit index "atacc_test1" for table "atacc1"
+ERROR:  could not create unique index
+DETAIL:  Table contains duplicated values.
+ERROR:  column "test1" named in key does not exist
+NOTICE:  ALTER TABLE / ADD UNIQUE will create implicit index "atacc_test1" for table "atacc1"
+ERROR:  duplicate key violates unique constraint "atacc_test1"
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "atacc1_test_key" for table "atacc1"
+NOTICE:  ALTER TABLE / ADD UNIQUE will create implicit index "atacc1_test2_key" for table "atacc1"
+ERROR:  duplicate key violates unique constraint "atacc1_test_key"
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "atacc_test1" for table "atacc1"
+ERROR:  duplicate key violates unique constraint "atacc_test1"
+ERROR:  null value in column "test" violates not-null constraint
+ERROR:  multiple primary keys for table "atacc1" are not allowed
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "atacc_oid1" for table "atacc1"
+ERROR:  duplicate key violates unique constraint "pfield_name"
+ERROR:  WS.not.there         does not exist
+CONTEXT:  PL/pgSQL function "tg_backlink_a" line 16 at assignment
+ERROR:  illegal backlink beginning with XX
+CONTEXT:  PL/pgSQL function "tg_backlink_a" line 16 at assignment
+ERROR:  PS.not.there         does not exist
+CONTEXT:  PL/pgSQL function "tg_slotlink_a" line 16 at assignment
+ERROR:  illegal slotlink beginning with XX
+CONTEXT:  PL/pgSQL function "tg_slotlink_a" line 16 at assignment
+ERROR:  duplicate key violates unique constraint "hslot_name"
+ERROR:  no manual manipulation of HSlot
+ERROR:  no manual manipulation of HSlot
+ERROR:  system "notthere" does not exist
+ERROR:  IFace slotname "IF.orion.ethernet_interface_name_too_long" too long (20 char max)
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "atacc_test1" for table "atacc1"
+ERROR:  could not create unique index
+DETAIL:  Table contains duplicated values.
+ERROR:  column "test" contains null values
+ERROR:  RETURN cannot have a parameter in function with OUT parameters at or near "i" at character 74
+ERROR:  column "test1" named in key does not exist
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "atacc_test1" for table "atacc1"
+ERROR:  multiple primary keys for table "atacc1" are not allowed
+ERROR:  duplicate key violates unique constraint "atacc_test1"
+ERROR:  null value in column "test" violates not-null constraint
+ERROR:  null value in column "test2" violates not-null constraint
+ERROR:  null value in column "test" violates not-null constraint
+NOTICE:  should see this
+NOTICE:  should see this only if 50 <> 0
+NOTICE:  should see this only if 50 fits in smallint
+NOTICE:  should see this
+NOTICE:  caught division_by_zero
+NOTICE:  should see this
+NOTICE:  should see this only if 100000 <> 0
+NOTICE:  caught numeric_value_out_of_range
+NOTICE:  should see this
+NOTICE:  should see this only if -100 <> 0
+NOTICE:  should see this only if -100 fits in smallint
+ERROR:  -100 is less than zero
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "atacc1_pkey" for table "atacc1"
+ERROR:  duplicate key violates unique constraint "atacc1_pkey"
+ERROR:  null value in column "test" violates not-null constraint
+NOTICE:  caught data_exception
+NOTICE:  caught data_exception
+NOTICE:  caught numeric_value_out_of_range or cardinality_violation
+ERROR:  permission denied: "pg_class" is a system catalog
+ERROR:  permission denied: "pg_class" is a system catalog
+ERROR:  relation "non_existent" does not exist
+ERROR:  relation "non_existent" does not exist
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "atacc1_pkey" for table "atacc1"
+ERROR:  column "test" is in a primary key
+ERROR:  column "test" contains null values
+ERROR:  column "bar" of relation "atacc1" does not exist
+ERROR:  column "bar" of relation "atacc1" does not exist
+ERROR:  cannot alter system column "oid"
+ERROR:  cannot alter system column "oid"
+ERROR:  "myview" is not a table
+ERROR:  "myview" is not a table
+ERROR:  null value in column "a" violates not-null constraint
+ERROR:  null value in column "a" violates not-null constraint
+ERROR:  column "a" contains null values
+ERROR:  column "a" contains null values
+ERROR:  null value in column "a" violates not-null constraint
+ERROR:  null value in column "a" violates not-null constraint
+ERROR:  null value in column "a" violates not-null constraint
+ERROR:  invalid input syntax for integer: "wrong_datatype"
+ERROR:  column "c3" of relation "def_test" does not exist
+ERROR:  permission denied: "pg_class" is a system catalog
+ERROR:  relation "nosuchtable" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "a" does not exist
+ERROR:  column "........pg.dropped.1........" does not exist
+ERROR:  column "a" does not exist
+ERROR:  column "........pg.dropped.1........" does not exist
+ERROR:  column "a" does not exist
+ERROR:  column atacc1.a does not exist
+ERROR:  column "a" does not exist
+ERROR:  column "a" does not exist
+ERROR:  column "........pg.dropped.1........" does not exist
+ERROR:  column atacc1.........pg.dropped.1........ does not exist
+ERROR:  column "........pg.dropped.1........" does not exist
+ERROR:  column "........pg.dropped.1........" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "a" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" does not exist
+ERROR:  INSERT has more expressions than target columns
+ERROR:  INSERT has more expressions than target columns
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "a" does not exist
+ERROR:  column "........pg.dropped.1........" does not exist
+ERROR:  column "bar" of relation "atacc1" does not exist
+ERROR:  cannot drop system column "xmin"
+ERROR:  "myview" is not a table
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "a" of relation "atacc1" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "atacc1" does not exist
+ERROR:  column "a" does not exist
+ERROR:  column "........pg.dropped.1........" does not exist
+ERROR:  column "a" named in key does not exist
+ERROR:  column "........pg.dropped.1........" named in key does not exist
+ERROR:  column "a" named in key does not exist
+ERROR:  column "........pg.dropped.1........" named in key does not exist
+ERROR:  column "a" does not exist
+ERROR:  column "........pg.dropped.1........" does not exist
+NOTICE:  CREATE TABLE / UNIQUE will create implicit index "atacc2_id_key" for table "atacc2"
+ERROR:  column "a" referenced in foreign key constraint does not exist
+ERROR:  column "........pg.dropped.1........" referenced in foreign key constraint does not exist
+ERROR:  column "a" referenced in foreign key constraint does not exist
+ERROR:  column "........pg.dropped.1........" referenced in foreign key constraint does not exist
+ERROR:  column "a" does not exist
+ERROR:  column "........pg.dropped.1........" does not exist
+ERROR:  column "a" of relation "test" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "test" does not exist
+ERROR:  extra data after last expected column
+CONTEXT:  COPY test, line 1: "10	11	12"
+ERROR:  column "a" of relation "test" does not exist
+ERROR:  column "........pg.dropped.1........" of relation "test" does not exist
+ERROR:  cannot drop inherited column "a"
+ERROR:  cannot drop inherited column "b"
+ERROR:  cannot rename inherited column "a"
+ERROR:  inherited column "a" must be renamed in child tables too
+ERROR:  inherited column "a" must be renamed in child tables too
+ERROR:  column must be added to child tables too
+NOTICE:  merging column "f1" with inherited definition
+ERROR:  cannot drop inherited column "f1"
+ERROR:  column "f1" does not exist
+NOTICE:  drop cascades to table c1
+ERROR:  cannot drop inherited column "f1"
+ERROR:  column "f1" does not exist
+NOTICE:  drop cascades to table c1
+ERROR:  cannot drop inherited column "f1"
+NOTICE:  drop cascades to table c1
+NOTICE:  merging column "f1" with inherited definition
+ERROR:  cannot drop inherited column "f1"
+NOTICE:  drop cascades to table c1
+NOTICE:  merging multiple inherited definitions of column "name"
+ERROR:  cannot drop inherited column "name"
+ERROR:  column "name" of relation "gc1" does not exist
+NOTICE:  drop cascades to table c1
+NOTICE:  drop cascades to table gc1
+ERROR:  column "oid" does not exist
+ERROR:  column "oid" does not exist
+ERROR:  column "oid" does not exist
+NOTICE:  merging definition of column "f2" for child "c1"
+ERROR:  new row for relation "c1" violates check constraint "c1_a1_check"
+NOTICE:  drop cascades to table c1
+NOTICE:  drop cascades to constraint c1_a1_check on table c1
+NOTICE:  drop cascades to table foo column f2
+ERROR:  column "f1" cannot be cast to type "pg_catalog.int4"
+NOTICE:  CREATE TABLE will create implicit sequence "anothertab_atcol1_seq" for serial column "anothertab.atcol1"
+ERROR:  column "atcol1" cannot be cast to type "pg_catalog.bool"
+ERROR:  new row for relation "anothertab" violates check constraint "anothertab_chk"
+ERROR:  default for column "atcol1" cannot be cast to type "pg_catalog.bool"
+ERROR:  operator does not exist: boolean <= integer
+HINT:  No operator matches the given name and argument type(s). You may need to add explicit type casts.
+NOTICE:  CREATE TABLE will create implicit sequence "t1_f1_seq" for serial column "t1.f1"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "t1_pkey" for table "t1"
+NOTICE:  drop cascades to composite type alter2.ctype
+NOTICE:  drop cascades to type alter2.ctype
+NOTICE:  drop cascades to type alter2.posint
+NOTICE:  drop cascades to function alter2.plus1(integer)
+NOTICE:  drop cascades to view alter2.v1
+NOTICE:  drop cascades to rule _RETURN on view alter2.v1
+NOTICE:  drop cascades to sequence alter2.t1_f1_seq
+NOTICE:  drop cascades to table alter2.t1 column f1
+NOTICE:  drop cascades to table alter2.t1
+NOTICE:  drop cascades to constraint t1_f2_check on table alter2.t1
+NOTICE:  nyeah nyeah, can't stop me
+NOTICE:  should see this
+CONTEXT:  SQL statement "SELECT  trap_zero_divide(-100)"
+	PL/pgSQL function "test_variable_storage" line 7 at perform
+NOTICE:  should see this only if -100 <> 0
+CONTEXT:  SQL statement "SELECT  trap_zero_divide(-100)"
+	PL/pgSQL function "test_variable_storage" line 7 at perform
+NOTICE:  should see this only if -100 fits in smallint
+CONTEXT:  SQL statement "SELECT  trap_zero_divide(-100)"
+	PL/pgSQL function "test_variable_storage" line 7 at perform
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "master_pkey" for table "master"
+ERROR:  insert or update on table "slave" violates foreign key constraint "slave_f1_fkey"
+DETAIL:  Key (f1)=(2) is not present in table "master".
+NOTICE:  caught foreign_key_violation
+ERROR:  insert or update on table "slave" violates foreign key constraint "slave_f1_fkey"
+DETAIL:  Key (f1)=(2) is not present in table "master".
+NOTICE:  caught foreign_key_violation
+ERROR:  insert or update on table "slave" violates foreign key constraint "slave_f1_fkey"
+DETAIL:  Key (f1)=(2) is not present in table "master".
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+ERROR:  cursor "test1" does not exist
+ERROR:  too many parameters specified for RAISE
+CONTEXT:  PL/pgSQL function "raise_test1" line 2 at raise
+ERROR:  too few parameters specified for RAISE
+CONTEXT:  PL/pgSQL function "raise_test2" line 2 at raise
+ERROR:  syntax error at or near "Johnny" at character 1
+QUERY:  Johnny Yuma
+CONTEXT:  SQL statement in PL/PgSQL function "bad_sql1" near line 4
+ERROR:  syntax error at or near "fought" at character 11
+QUERY:   select I fought the law, the law won
+CONTEXT:  SQL statement in PL/PgSQL function "bad_sql2" near line 3
+ERROR:  syntax error at end of input at character 8
+QUERY:  SELECT 
+CONTEXT:  SQL statement in PL/PgSQL function "missing_return_expr" near line 2
+ERROR:  RETURN cannot have a parameter in function returning void at or near "5" at character 72
+ERROR:  control reached end of function without RETURN
+CONTEXT:  PL/pgSQL function "missing_return_expr"
+NOTICE:  10 1
+NOTICE:  10 15
+NOTICE:  10 15 20
+ERROR:  column "sqlstate" does not exist
+CONTEXT:  SQL statement "SELECT  sqlstate"
+	PL/pgSQL function "excpt_test1" line 2 at raise
+ERROR:  column "sqlstate" does not exist
+CONTEXT:  SQL statement "SELECT  sqlstate"
+	PL/pgSQL function "excpt_test2" line 4 at raise
+NOTICE:  caught exception P0001 user exception
+NOTICE:  P0001 user exception
+NOTICE:  caught exception 22012 division by zero
+NOTICE:  P0001 user exception
+NOTICE:  {10,20,30}; 20; xyz; xyzabc; (10,aaa,,30); <NULL>
+NOTICE:  CREATE TABLE will create implicit sequence "conttesttbl_idx_seq" for serial column "conttesttbl.idx"
+NOTICE:  ---1---
+NOTICE:  1
+NOTICE:  2
+NOTICE:  3
+NOTICE:  4
+NOTICE:  5
+NOTICE:  6
+NOTICE:  7
+NOTICE:  8
+NOTICE:  9
+NOTICE:  10
+NOTICE:  ---2---
+NOTICE:  9
+NOTICE:  8
+NOTICE:  7
+NOTICE:  6
+NOTICE:  5
+NOTICE:  4
+NOTICE:  3
+NOTICE:  2
+NOTICE:  1
+NOTICE:  0
+NOTICE:  ---3---
+NOTICE:  1
+NOTICE:  3
+NOTICE:  5
+NOTICE:  7
+NOTICE:  9
+NOTICE:  ---4---
+NOTICE:  5
+NOTICE:  6
+NOTICE:  7
+NOTICE:  8
+NOTICE:  9
+NOTICE:  10
+NOTICE:  ---5---
+NOTICE:  30
+NOTICE:  40
+NOTICE:  ---6---
+NOTICE:  30
+NOTICE:  40
+NOTICE:  ---7---
+NOTICE:  1
+NOTICE:  2
+NOTICE:  3
+NOTICE:  ---8---
+NOTICE:  1
+NOTICE:  2
+NOTICE:  3
+NOTICE:  ---9---
+NOTICE:  10
+NOTICE:  ---10---
+NOTICE:  10
+ERROR:  CONTINUE cannot be used outside a loop
+CONTEXT:  PL/pgSQL function "continue_test2"
+ERROR:  CONTINUE cannot be used outside a loop
+CONTEXT:  PL/pgSQL function "continue_test3"
+ERROR:  no such label at or near "flbl1" at character 101
+ERROR:  end label "outer_label" differs from block's label "inner_label"
+CONTEXT:  compile of PL/pgSQL function "end_label3" near line 6
+ERROR:  end label "outer_label" specified for unlabelled block
+CONTEXT:  compile of PL/pgSQL function "end_label4" near line 5
+ERROR:  could not set permissions on directory "/no/such/location": No such file or directory
+ERROR:  tablespace "nosuchspace" does not exist
+ERROR:  tablespace "testspace" is not empty
+NOTICE:  drop cascades to table testschema.foo
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down

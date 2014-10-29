@@ -1,0 +1,32 @@
+data.o: data.c ../../../../src/include/postgres_fe.h \
+ ../../../../src/include/c.h ../../../../src/include/pg_config.h \
+ ../../../../src/include/pg_config_manual.h \
+ ../../../../src/include/pg_config_os.h \
+ ../../../../src/include/postgres_ext.h ../../../../src/include/port.h \
+ ../../../../src/interfaces/ecpg/include/ecpgtype.h \
+ ../../../../src/interfaces/ecpg/include/ecpglib.h \
+ ../../../../src/interfaces/libpq/libpq-fe.h \
+ ../../../../src/include/postgres_ext.h \
+ ../../../../src/interfaces/ecpg/include/ecpgtype.h \
+ ../../../../src/interfaces/ecpg/include/ecpgerrno.h extern.h \
+ ../../../../src/interfaces/ecpg/include/sqlca.h \
+ ../../../../src/interfaces/ecpg/include/pgtypes_numeric.h \
+ ../../../../src/interfaces/ecpg/include/pgtypes_date.h \
+ ../../../../src/interfaces/ecpg/include/pgtypes_timestamp.h \
+ ../../../../src/interfaces/ecpg/include/pgtypes_interval.h
+data.c ../../../../src/include/postgres_fe.h :
+ ../../../../src/include/c.h ../../../../src/include/pg_config.h :
+ ../../../../src/include/pg_config_manual.h :
+ ../../../../src/include/pg_config_os.h :
+ ../../../../src/include/postgres_ext.h ../../../../src/include/port.h :
+ ../../../../src/interfaces/ecpg/include/ecpgtype.h :
+ ../../../../src/interfaces/ecpg/include/ecpglib.h :
+ ../../../../src/interfaces/libpq/libpq-fe.h :
+ ../../../../src/include/postgres_ext.h :
+ ../../../../src/interfaces/ecpg/include/ecpgtype.h :
+ ../../../../src/interfaces/ecpg/include/ecpgerrno.h extern.h :
+ ../../../../src/interfaces/ecpg/include/sqlca.h :
+ ../../../../src/interfaces/ecpg/include/pgtypes_numeric.h :
+ ../../../../src/interfaces/ecpg/include/pgtypes_date.h :
+ ../../../../src/interfaces/ecpg/include/pgtypes_timestamp.h :
+ ../../../../src/interfaces/ecpg/include/pgtypes_interval.h :

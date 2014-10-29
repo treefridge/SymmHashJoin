@@ -1,0 +1,557 @@
+gmake[3]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4'
+gmake -C doc install
+gmake[4]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/doc'
+mkdir -p -- /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/doc/postgresql/html
+mkdir -p -- /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/man/man1 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/man/man7
+gzip -d -c ./postgres.tar.gz | ( cd /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/doc/postgresql/html && /bin/tar xf - )
+for file in man1/*.1 man7/*.7 ; do \
+	  /bin/sh ../config/install-sh -c -m 644 $file /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/man/$file || exit; \
+	done
+gmake[4]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/doc'
+gmake -C src install
+gmake[4]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src'
+/bin/sh ../config/mkinstalldirs /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/pgxs/src
+mkdir -p -- /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/pgxs/src
+/bin/sh ../config/install-sh -c -m 644 Makefile.global /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/pgxs/src/Makefile.global
+/bin/sh ../config/install-sh -c -m 644 Makefile.port /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/pgxs/src/Makefile.port
+/bin/sh ../config/install-sh -c -m 644 ./Makefile.shlib /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/pgxs/src/Makefile.shlib
+/bin/sh ../config/install-sh -c -m 644 ./nls-global.mk /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/pgxs/src/nls-global.mk
+gmake -C port install
+gmake[5]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+/bin/sh ../../config/install-sh -c -m 644  libpgport.a /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib
+gmake[5]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake -C timezone install
+gmake[5]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/timezone'
+gmake -C ../../src/port all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+mkdir -p -- /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql
+./zic -d /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/timezone ./data/africa ./data/antarctica ./data/asia ./data/australasia ./data/europe ./data/northamerica ./data/southamerica ./data/pacificnew ./data/etcetera ./data/factory ./data/backward ./data/systemv ./data/solar87 ./data/solar88 ./data/solar89
+gmake[5]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/timezone'
+gmake -C backend install
+gmake[5]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend'
+gmake -C ../../src/port all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake -C access all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access'
+gmake -C common SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/common'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/common'
+gmake -C gist SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/gist'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/gist'
+gmake -C hash SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/hash'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/hash'
+gmake -C heap SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/heap'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/heap'
+gmake -C index SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/index'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/index'
+gmake -C nbtree SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/nbtree'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/nbtree'
+gmake -C rtree SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/rtree'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/rtree'
+gmake -C transam SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/transam'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access/transam'
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/access'
+gmake -C bootstrap all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/bootstrap'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/bootstrap'
+gmake -C catalog all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/catalog'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/catalog'
+gmake -C parser all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/parser'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/parser'
+gmake -C commands all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/commands'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/commands'
+gmake -C executor all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/executor'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/executor'
+gmake -C lib all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/lib'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/lib'
+gmake -C libpq all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/libpq'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/libpq'
+gmake -C main all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/main'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/main'
+gmake -C nodes all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/nodes'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/nodes'
+gmake -C optimizer all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer'
+gmake -C geqo SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer/geqo'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer/geqo'
+gmake -C path SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer/path'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer/path'
+gmake -C plan SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer/plan'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer/plan'
+gmake -C prep SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer/prep'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer/prep'
+gmake -C util SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer/util'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer/util'
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/optimizer'
+gmake -C port all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/port'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/port'
+gmake -C postmaster all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/postmaster'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/postmaster'
+gmake -C regex all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/regex'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/regex'
+gmake -C rewrite all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/rewrite'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/rewrite'
+gmake -C storage all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage'
+gmake -C buffer SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/buffer'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/buffer'
+gmake -C file SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/file'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/file'
+gmake -C freespace SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/freespace'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/freespace'
+gmake -C ipc SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/ipc'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/ipc'
+gmake -C large_object SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/large_object'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/large_object'
+gmake -C lmgr SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/lmgr'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/lmgr'
+gmake -C page SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/page'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/page'
+gmake -C smgr SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/smgr'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage/smgr'
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/storage'
+gmake -C tcop all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/tcop'
+gmake[6]: Nothing to be done for `all'.
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/tcop'
+gmake -C utils all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils'
+gmake -C adt SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/adt'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/adt'
+gmake -C cache SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/cache'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/cache'
+gmake -C error SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/error'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/error'
+gmake -C fmgr SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/fmgr'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/fmgr'
+gmake -C hash SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/hash'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/hash'
+gmake -C init SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/init'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/init'
+gmake -C mb SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb'
+gmake -C misc SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/misc'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/misc'
+gmake -C mmgr SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mmgr'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mmgr'
+gmake -C resowner SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/resowner'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/resowner'
+gmake -C sort SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/sort'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/sort'
+gmake -C time SUBSYS.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/time'
+gmake[7]: `SUBSYS.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/time'
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils'
+gmake -C ../../src/timezone all
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/timezone'
+gmake -C ../../src/port all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/timezone'
+mkdir -p -- /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql
+/bin/sh ../../config/install-sh -c  postgres /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/postgres
+ln -s postgres /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/postmaster
+gmake -C catalog install-data
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/catalog'
+/bin/sh ../../../config/install-sh -c -m 644 postgres.bki         /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/postgres.bki
+/bin/sh ../../../config/install-sh -c -m 644 postgres.description /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/postgres.description
+/bin/sh ../../../config/install-sh -c -m 644 ./system_views.sql /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/system_views.sql
+/bin/sh ../../../config/install-sh -c -m 644 ./information_schema.sql /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/information_schema.sql
+/bin/sh ../../../config/install-sh -c -m 644 ./sql_features.txt /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/sql_features.txt
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/catalog'
+/bin/sh ../../config/install-sh -c -m 644 ./libpq/pg_hba.conf.sample /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/pg_hba.conf.sample
+/bin/sh ../../config/install-sh -c -m 644 ./libpq/pg_ident.conf.sample /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/pg_ident.conf.sample
+/bin/sh ../../config/install-sh -c -m 644 ./utils/misc/postgresql.conf.sample /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/postgresql.conf.sample
+/bin/sh ../../config/install-sh -c -m 644 ./access/transam/recovery.conf.sample /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/recovery.conf.sample
+gmake[5]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend'
+gmake -C backend/utils/mb/conversion_procs install
+gmake[5]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs'
+/bin/sh ../../../../../config/install-sh -c -m 644 conversion_create.sql /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/ascii_and_mic'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libascii_and_mic.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/ascii_and_mic.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/ascii_and_mic'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/cyrillic_and_mic'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libcyrillic_and_mic.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/cyrillic_and_mic.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/cyrillic_and_mic'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/euc_cn_and_mic'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libeuc_cn_and_mic.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/euc_cn_and_mic.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/euc_cn_and_mic'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/euc_jp_and_sjis'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libeuc_jp_and_sjis.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/euc_jp_and_sjis.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/euc_jp_and_sjis'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/euc_kr_and_mic'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libeuc_kr_and_mic.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/euc_kr_and_mic.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/euc_kr_and_mic'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/euc_tw_and_big5'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libeuc_tw_and_big5.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/euc_tw_and_big5.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/euc_tw_and_big5'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/latin2_and_win1250'
+/bin/sh ../../../../../../config/install-sh -c -m 755  liblatin2_and_win1250.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/latin2_and_win1250.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/latin2_and_win1250'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/latin_and_mic'
+/bin/sh ../../../../../../config/install-sh -c -m 755  liblatin_and_mic.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/latin_and_mic.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/latin_and_mic'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_ascii'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_ascii.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_ascii.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_ascii'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_big5'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_big5.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_big5.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_big5'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_cyrillic'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_cyrillic.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_cyrillic.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_cyrillic'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_euc_cn'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_euc_cn.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_euc_cn.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_euc_cn'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_euc_jp'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_euc_jp.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_euc_jp.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_euc_jp'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_euc_kr'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_euc_kr.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_euc_kr.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_euc_kr'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_euc_tw'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_euc_tw.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_euc_tw.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_euc_tw'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_gb18030'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_gb18030.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_gb18030.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_gb18030'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_gbk'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_gbk.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_gbk.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_gbk'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_iso8859'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_iso8859.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_iso8859.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_iso8859'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_iso8859_1'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_iso8859_1.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_iso8859_1.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_iso8859_1'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_johab'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_johab.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_johab.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_johab'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_sjis'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_sjis.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_sjis.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_sjis'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_win1258'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_win1258.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_win1258.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_win1258'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_uhc'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_uhc.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_uhc.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_uhc'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_win1250'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_win1250.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_win1250.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_win1250'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_win1252'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_win1252.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_win1252.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_win1252'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_win1256'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_win1256.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_win1256.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_win1256'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_win874'
+/bin/sh ../../../../../../config/install-sh -c -m 755  libutf8_and_win874.so.0.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/utf8_and_win874.so
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs/utf8_and_win874'
+gmake[5]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/utils/mb/conversion_procs'
+gmake -C include install
+gmake[5]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/include'
+mkdir -p -- /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/libpq /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/internal/libpq
+mkdir -p -- /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/access /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/bootstrap /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/catalog /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/commands /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/executor /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/lib /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/libpq /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/mb /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/nodes /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/optimizer /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/parser /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/regex /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/rewrite /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/storage /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/tcop /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/utils /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/port /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/port/win32 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/port/win32/arpa /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/port/win32/netinet /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/port/win32/sys
+/bin/sh ../../config/install-sh -c -m 644 ./postgres_ext.h   /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include
+/bin/sh ../../config/install-sh -c -m 644 ./libpq/libpq-fs.h /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/libpq
+/bin/sh ../../config/install-sh -c -m 644 pg_config.h    /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include
+/bin/sh ../../config/install-sh -c -m 644 pg_config_os.h /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include
+/bin/sh ../../config/install-sh -c -m 644 ./pg_config_manual.h /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include
+/bin/sh ../../config/install-sh -c -m 644 ./c.h            /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/internal
+/bin/sh ../../config/install-sh -c -m 644 ./port.h         /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/internal
+/bin/sh ../../config/install-sh -c -m 644 ./postgres_fe.h  /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/internal
+/bin/sh ../../config/install-sh -c -m 644 ./libpq/pqcomm.h /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/internal/libpq
+/bin/sh ../../config/install-sh -c -m 644 pg_config.h    /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server
+/bin/sh ../../config/install-sh -c -m 644 pg_config_os.h /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server
+cp ./*.h /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/ || exit; \
+	chmod 644 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/*.h  || exit; \
+	for dir in access bootstrap catalog commands executor lib libpq mb nodes optimizer parser regex rewrite storage tcop utils port port/win32 port/win32/arpa port/win32/netinet port/win32/sys; do \
+	  cp ./$dir/*.h /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/$dir/ || exit; \
+	  chmod 644 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/server/$dir/*.h  || exit; \
+	done
+gmake[5]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/include'
+gmake -C interfaces install
+gmake[5]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+/bin/sh ../../../config/install-sh -c -m 644  libpq.a /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/libpq.a
+/bin/sh ../../../config/install-sh -c -m 755  libpq.so.4.1 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/libpq.so.4.1
+cd /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib && \
+	rm -f libpq.so.4 && \
+	ln -s libpq.so.4.1 libpq.so.4
+cd /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib && \
+	rm -f libpq.so && \
+	ln -s libpq.so.4.1 libpq.so
+/bin/sh ../../../config/install-sh -c -m 644 ./libpq-fe.h /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include
+/bin/sh ../../../config/install-sh -c -m 644 ./libpq-int.h /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/internal
+/bin/sh ../../../config/install-sh -c -m 644 ./pqexpbuffer.h /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/internal
+/bin/sh ../../../config/install-sh -c -m 644 ./pg_service.conf.sample /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/pg_service.conf.sample
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg'
+gmake -C include install
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg/include'
+mkdir -p -- /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/informix/esql
+for i in ecpgerrno.h ecpglib.h ecpgtype.h sqlca.h sql3types.h ecpg_informix.h pgtypes_error.h pgtypes_numeric.h pgtypes_timestamp.h pgtypes_date.h pgtypes_interval.h; do /bin/sh ../../../../config/install-sh -c -m 644 ./$i /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include || exit; done
+for i in datetime.h decimal.h sqltypes.h sqlda.h; do /bin/sh ../../../../config/install-sh -c -m 644 ./$i /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/include/postgresql/informix/esql || exit; done
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg/include'
+gmake -C pgtypeslib install
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg/pgtypeslib'
+/bin/sh ../../../../config/install-sh -c -m 644  libpgtypes.a /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/libpgtypes.a
+/bin/sh ../../../../config/install-sh -c -m 755  libpgtypes.so.2.1 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/libpgtypes.so.2.1
+cd /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib && \
+	rm -f libpgtypes.so.2 && \
+	ln -s libpgtypes.so.2.1 libpgtypes.so.2
+cd /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib && \
+	rm -f libpgtypes.so && \
+	ln -s libpgtypes.so.2.1 libpgtypes.so
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg/pgtypeslib'
+gmake -C ecpglib install
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg/ecpglib'
+/bin/sh ../../../../config/install-sh -c -m 644  libecpg.a /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/libecpg.a
+/bin/sh ../../../../config/install-sh -c -m 755  libecpg.so.5.1 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/libecpg.so.5.1
+cd /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib && \
+	rm -f libecpg.so.5 && \
+	ln -s libecpg.so.5.1 libecpg.so.5
+cd /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib && \
+	rm -f libecpg.so && \
+	ln -s libecpg.so.5.1 libecpg.so
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg/ecpglib'
+gmake -C compatlib install
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg/compatlib'
+/bin/sh ../../../../config/install-sh -c -m 644  libecpg_compat.a /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/libecpg_compat.a
+/bin/sh ../../../../config/install-sh -c -m 755  libecpg_compat.so.2.1 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/libecpg_compat.so.2.1
+cd /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib && \
+	rm -f libecpg_compat.so.2 && \
+	ln -s libecpg_compat.so.2.1 libecpg_compat.so.2
+cd /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib && \
+	rm -f libecpg_compat.so && \
+	ln -s libecpg_compat.so.2.1 libecpg_compat.so
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg/compatlib'
+gmake -C preproc install
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg/preproc'
+gmake -C ../../../../src/port all
+gmake[8]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[8]: Nothing to be done for `all'.
+gmake[8]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+/bin/sh ../../../../config/install-sh -c  ecpg /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg/preproc'
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/ecpg'
+gmake[5]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces'
+gmake -C bin install
+gmake[5]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/initdb'
+gmake -C ../../../src/interfaces/libpq all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+gmake -C ../../../src/port all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+/bin/sh ../../../config/install-sh -c  initdb /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/initdb
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/initdb'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/ipcclean'
+/bin/sh ../../../config/install-sh -c -m 755 ipcclean /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/ipcclean
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/ipcclean'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/pg_ctl'
+gmake -C ../../../src/interfaces/libpq all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+gmake -C ../../../src/port all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+/bin/sh ../../../config/install-sh -c  pg_ctl /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/pg_ctl
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/pg_ctl'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/pg_dump'
+gmake -C ../../../src/interfaces/libpq all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+gmake -C ../../../src/port all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake -C ../../../src/backend/parser keywords.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/parser'
+gmake[7]: `keywords.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/parser'
+/bin/sh ../../../config/install-sh -c  pg_dump /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/pg_dump
+/bin/sh ../../../config/install-sh -c  pg_restore /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/pg_restore
+/bin/sh ../../../config/install-sh -c  pg_dumpall /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/pg_dumpall
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/pg_dump'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/psql'
+gmake -C ../../../src/interfaces/libpq all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+gmake -C ../../../src/port all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+/bin/sh ../../../config/install-sh -c  psql /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/psql
+/bin/sh ../../../config/install-sh -c -m 644 ./psqlrc.sample /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/share/postgresql/psqlrc.sample
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/psql'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/scripts'
+gmake -C ../../../src/interfaces/libpq all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/interfaces/libpq'
+gmake -C ../../../src/backend/parser keywords.o
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/parser'
+gmake[7]: `keywords.o' is up to date.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/backend/parser'
+/bin/sh ../../../config/install-sh -c  createdb   /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/createdb
+/bin/sh ../../../config/install-sh -c  dropdb     /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/dropdb
+/bin/sh ../../../config/install-sh -c  createlang /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/createlang
+/bin/sh ../../../config/install-sh -c  droplang   /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/droplang
+/bin/sh ../../../config/install-sh -c  createuser /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/createuser
+/bin/sh ../../../config/install-sh -c  dropuser   /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/dropuser
+/bin/sh ../../../config/install-sh -c  clusterdb  /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/clusterdb
+/bin/sh ../../../config/install-sh -c  vacuumdb   /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/vacuumdb
+/bin/sh ../../../config/install-sh -c  reindexdb  /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/reindexdb
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/scripts'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/pg_config'
+gmake -C ../../../src/port all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+/bin/sh ../../../config/install-sh -c -m 755 pg_config /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/pg_config
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/pg_config'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/pg_controldata'
+gmake -C ../../../src/port all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+/bin/sh ../../../config/install-sh -c  pg_controldata /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/pg_controldata
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/pg_controldata'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/pg_resetxlog'
+gmake -C ../../../src/port all
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+gmake[7]: Nothing to be done for `all'.
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/port'
+/bin/sh ../../../config/install-sh -c  pg_resetxlog /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/bin/pg_resetxlog
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin/pg_resetxlog'
+gmake[5]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/bin'
+gmake -C pl install
+gmake[5]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/pl'
+gmake[6]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/pl/plpgsql'
+gmake -C src install
+gmake[7]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/pl/plpgsql/src'
+/bin/sh ../../../../config/install-sh -c -m 755  libplpgsql.so.1.0 /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/plpgsql.so
+gmake[7]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/pl/plpgsql/src'
+gmake[6]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/pl/plpgsql'
+gmake[5]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/pl'
+gmake -C makefiles install
+gmake[5]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/makefiles'
+mkdir -p -- /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/pgxs/src/makefiles
+/bin/sh ../../config/install-sh -c -m 644 ./pgxs.mk /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/pgxs/src/makefiles/
+gmake[5]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/makefiles'
+gmake -C utils install
+gmake[5]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/utils'
+gmake[5]: Nothing to be done for `install'.
+gmake[5]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/utils'
+gmake[4]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/src'
+gmake -C config install
+gmake[4]: Entering directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/config'
+mkdir -p -- /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/pgxs/config
+/bin/sh ../config/install-sh -c -m 755 ./install-sh /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/pgxs/config/install-sh
+/bin/sh ../config/install-sh -c -m 755 ./mkinstalldirs /.automount/genh/h/i2/pidur072/postgresql-8.1.4/src/test/regress/./tmp_check/install/home/genh/h/i2/pidur072/database/lib/postgresql/pgxs/config/mkinstalldirs
+gmake[4]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4/config'
+PostgreSQL installation complete.
+gmake[3]: Leaving directory `/.automount/genh/h/i2/pidur072/postgresql-8.1.4'

@@ -1,0 +1,26 @@
+auth.o: auth.c ../../../src/include/postgres.h ../../../src/include/c.h \
+ ../../../src/include/pg_config.h ../../../src/include/pg_config_manual.h \
+ ../../../src/include/pg_config_os.h ../../../src/include/postgres_ext.h \
+ ../../../src/include/port.h ../../../src/include/utils/elog.h \
+ ../../../src/include/utils/errcodes.h \
+ ../../../src/include/utils/palloc.h ../../../src/include/libpq/auth.h \
+ ../../../src/include/libpq/libpq-be.h ../../../src/include/libpq/hba.h \
+ ../../../src/include/nodes/pg_list.h ../../../src/include/nodes/nodes.h \
+ ../../../src/include/libpq/pqcomm.h ../../../src/include/libpq/crypt.h \
+ ../../../src/include/libpq/libpq.h ../../../src/include/lib/stringinfo.h \
+ ../../../src/include/libpq/ip.h ../../../src/include/getaddrinfo.h \
+ ../../../src/include/libpq/pqformat.h ../../../src/include/miscadmin.h \
+ ../../../src/include/storage/ipc.h
+auth.c ../../../src/include/postgres.h ../../../src/include/c.h :
+ ../../../src/include/pg_config.h ../../../src/include/pg_config_manual.h :
+ ../../../src/include/pg_config_os.h ../../../src/include/postgres_ext.h :
+ ../../../src/include/port.h ../../../src/include/utils/elog.h :
+ ../../../src/include/utils/errcodes.h :
+ ../../../src/include/utils/palloc.h ../../../src/include/libpq/auth.h :
+ ../../../src/include/libpq/libpq-be.h ../../../src/include/libpq/hba.h :
+ ../../../src/include/nodes/pg_list.h ../../../src/include/nodes/nodes.h :
+ ../../../src/include/libpq/pqcomm.h ../../../src/include/libpq/crypt.h :
+ ../../../src/include/libpq/libpq.h ../../../src/include/lib/stringinfo.h :
+ ../../../src/include/libpq/ip.h ../../../src/include/getaddrinfo.h :
+ ../../../src/include/libpq/pqformat.h ../../../src/include/miscadmin.h :
+ ../../../src/include/storage/ipc.h :
