@@ -771,6 +771,7 @@ typedef struct PlanState
 	 * Other run-time state needed by most if not all node types.
 	 */
 	TupleTableSlot *ps_OuterTupleSlot;	/* slot for current "outer" tuple */
+    TupleTableSlot *ps_InnerTupleSlot; //*CSI3130Project
 	TupleTableSlot *ps_ResultTupleSlot; /* slot for my result tuples */
 	ExprContext *ps_ExprContext;	/* node's expression-evaluation context */
 	ProjectionInfo *ps_ProjInfo;	/* info for doing tuple projection */
@@ -1109,24 +1110,53 @@ typedef struct MergeJoinState
 typedef struct HashJoinTupleData *HashJoinTuple;
 typedef struct HashJoinTableData *HashJoinTable;
 
-typedef struct HashJoinState
+typedef struct HashJoinState//*CSI3130Project
 {
 	JoinState	js;				/* its first field is NodeTag */
 	List	   *hashclauses;	/* list of ExprState nodes */
-	HashJoinTable hj_HashTable;
-	uint32		hj_CurHashValue;
-	int			hj_CurBucketNo;
-	HashJoinTuple hj_CurTuple;
-	List	   *hj_OuterHashKeys;		/* list of ExprState nodes */
+	
+    HashJoinTable hj_InnerHashTable;
+    HashJoinTable hj_OuterHashTable;
+	
+    uint32		hj_InnerCurHashValue;
+    uint32		hj_OuterCurHashValue;
+	
+    int			hj_InnerCurBucketNo;
+    int			hj_OuterCurBucketNo;
+	
+    HashJoinTuple hj_InnerCurTuple;
+    HashJoinTuple hj_OuterCurTuple;
+	
 	List	   *hj_InnerHashKeys;		/* list of ExprState nodes */
-	List	   *hj_HashOperators;		/* list of operator OIDs */
-	TupleTableSlot *hj_OuterTupleSlot;
-	TupleTableSlot *hj_HashTupleSlot;
-	TupleTableSlot *hj_NullInnerTupleSlot;
-	TupleTableSlot *hj_FirstOuterTupleSlot;
-	bool		hj_NeedNewOuter;
+    List	   *hj_OuterHashKeys;		/* list of ExprState nodes */
+	
+    List	   *hj_HashOperators;		/* list of operator OIDs */
+	
+    TupleTableSlot *hj_InnerTupleSlot;
+    TupleTableSlot *hj_OuterTupleSlot;
+	
+	TupleTableSlot *hj_InnerHashTupleSlot;
+    TupleTableSlot *hj_OuterHashTupleSlot;
+	
+    TupleTableSlot *hj_NullInnerTupleSlot;
+	
+    TupleTableSlot *hj_FirstInnerTupleSlot;
+    TupleTableSlot *hj_FirstOuterTupleSlot;
+    
+    bool        inner_exhausted;
+    bool        outer_exhausted;
+    
+    bool        hj_NeedNewInner;
+    bool        hj_NeedNewOuter;
+    
 	bool		hj_MatchedOuter;
+    
+    bool        hj_InnerNotEmpty;
 	bool		hj_OuterNotEmpty;
+    
+    int         matches_by_probing_inner;
+    int         matches_by_probing_outer;
+    bool        isNextFetchInner;       //false -> outer, true -> inner
 } HashJoinState;
 
 
