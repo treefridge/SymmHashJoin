@@ -27,3 +27,12 @@
 *.i*86
 *.x86_64
 *.hex
+src/PostgreSQL_CSI/PostgreSQL_CSI/main.c
+src/PostgreSQL_CSI/PostgreSQL_CSI/PostgreSQL_CSI.1
+src/PostgreSQL_CSI/PostgreSQL_CSI.xcodeproj/project.pbxproj
+src/PostgreSQL_CSI/PostgreSQL_CSI.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+src/PostgreSQL_CSI/PostgreSQL_CSI.xcodeproj/project.xcworkspace/xcshareddata/PostgreSQL_CSI.xccheckout
+src/PostgreSQL_CSI/PostgreSQL_CSI.xcodeproj/project.xcworkspace/xcuserdata/Emi.xcuserdatad/UserInterfaceState.xcuserstate
+src/PostgreSQL_CSI/PostgreSQL_CSI.xcodeproj/xcuserdata/Emi.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+src/PostgreSQL_CSI/PostgreSQL_CSI.xcodeproj/xcuserdata/Emi.xcuserdatad/xcschemes/PostgreSQL_CSI.xcscheme
+src/PostgreSQL_CSI/PostgreSQL_CSI.xcodeproj/xcuserdata/Emi.xcuserdatad/xcschemes/xcschememanagement.plist

@@ -37,7 +37,6 @@ static void ExecHashIncreaseNumBatches(HashJoinTable hashtable);
 /* ----------------------------------------------------------------
  *		ExecHash
  *
- *		stub for pro forma compliance
  * ----------------------------------------------------------------
  */
 TupleTableSlot *
