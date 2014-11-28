@@ -237,7 +237,7 @@ ExecHashJoin(HashJoinState *node)
                 ExprContext *econtext = node->js.ps.ps_ExprContext;
                 econtext->ecxt_innertuple = node->js.ps.ps_InnerTupleSlot;
                 
-                curtuple = ExecScanHashBucket_probeouter(node, econtext);
+                curtuple = ExecScanHashBucket_probingOuter(node, econtext);
                 if (curtuple == NULL)
                     break;			/* out of matches */
                 
@@ -299,7 +299,7 @@ ExecHashJoin(HashJoinState *node)
                 ExprContext *econtext = node->js.ps.ps_ExprContext;
                 econtext->ecxt_outertuple = node->js.ps.ps_OuterTupleSlot;
                 
-                curtuple = ExecScanHashBucket_probeinner(node, econtext);
+                curtuple = ExecScanHashBucket_probingInner(node, econtext);
                 if (curtuple == NULL)
                     break;			/* out of matches */
                 
@@ -486,10 +486,10 @@ ExecInitHashJoin(HashJoin *node, EState *estate)
         
 		hjstate->hj_InnerTupleSlot = slot;
         //CSI3130-->
-		*hashstate = (HashState *) outerPlanState(hjstate);
-		*slot = hashstate->ps.ps_ResultTupleSlot;
+		HashState *outerhashstate = (HashState *) outerPlanState(hjstate);
+		TupleTableSlot *outerslot = outerhashstate->ps.ps_ResultTupleSlot;
         
-		hjstate->hj_OuterTupleSlot = slot;
+		hjstate->hj_OuterTupleSlot = outerslot;
         //CSI3130<--
 	}
     
