@@ -71,7 +71,7 @@ ExecHashJoin(HashJoinState *node)
 	otherqual = node->js.ps.qual;
 	inner_hashNode = (HashState *) innerPlanState(node);
 	outer_hashNode = (HashState *) outerPlanState(node);
-	outerNode = outerPlanState(node);
+	outerNode = (HashState *) outerPlanState(node);
     
 	/*
 	 * get information from HashJoin state
@@ -157,6 +157,8 @@ ExecHashJoin(HashJoinState *node)
 		 */
 		if ((node->hj_NeedNewInner || node->inner_exhausted) && (node->hj_NeedNewOuter || node->outer_exhausted))
 		{
+			if(node->isNextFetchInner)
+			{
             if(!node->inner_exhausted){
                 innerTupleSlot = ExecProcNode((PlanState*) inner_hashNode);
                 node->isNextFetchInner = false;
@@ -164,24 +166,55 @@ ExecHashJoin(HashJoinState *node)
                 
                 if(!TupIsNull(innerTupleSlot)){
                     node->hj_NeedNewInner = false;
-                    bool isNullAttr;
+                    //bool isNullAttr;
                     printf("got new inner \n");
                 }
                 
                 //Get Hash Value
                 ExprContext *econtext = node->js.ps.ps_ExprContext;
                 econtext->ecxt_innertuple = innerTupleSlot;
-                hashvalue = ExecHashGetHashValue(outer_hashTable, econtext,
+                hashvalue = ExecHashGetHashValue(outer_hashtable, econtext,
                                                  node->hj_InnerHashKeys);
                 node->js.ps.ps_InnerTupleSlot = innerTupleSlot;
                 econtext->ecxt_innertuple = node->js.ps.ps_InnerTupleSlot;
                 
-                node->hj_InnerCurHashValue = hashValue;
+                node->hj_InnerCurHashValue = hashvalue;
                 ExecHashGetBucketAndBatch(outer_hashtable, hashvalue, &node->hj_OuterCurBucketNo, &batchno);
-                node->outer_hj_CurTuple = NULL; //Reset current tuple in bucket in outer hash table
+                node->hj_OuterCurTuple = NULL; //Reset current tuple in bucket in outer hash table
             } else {
                 node->inner_exhausted = true;
             }
+			}
+			else
+			{
+			//outer
+			if(!node->outer_exhausted){
+                outerTupleSlot = ExecProcNode((PlanState*) outer_hashNode);
+                node->isNextFetchInner = true; // deal with later!!!
+                node->js.ps.ps_OuterTupleSlot = outerTupleSlot;
+                
+                if(!TupIsNull(outerTupleSlot)){
+                    node->hj_NeedNewOuter = false;
+                    //bool isNullAttr;
+                    printf("got new outer \n");
+                }
+                
+                //Get Hash Value
+                ExprContext *econtext = node->js.ps.ps_ExprContext;
+                econtext->ecxt_outertuple = outerTupleSlot;
+                hashvalue = ExecHashGetHashValue(inner_hashtable, econtext,
+                                                 node->hj_OuterHashKeys);
+                node->js.ps.ps_OuterTupleSlot = outerTupleSlot;
+                econtext->ecxt_outertuple = node->js.ps.ps_OuterTupleSlot;
+                
+                node->hj_OuterCurHashValue = hashvalue;
+                ExecHashGetBucketAndBatch(inner_hashtable, hashvalue, &node->hj_InnerCurBucketNo, &batchno);
+                node->hj_InnerCurTuple = NULL; //Reset current tuple in bucket in outer hash table
+            } else {
+                node->outer_exhausted = true;
+            }
+			}
+			//end outer
         }
         
         if (node->inner_exhausted && node->outer_exhausted)
@@ -453,8 +486,8 @@ ExecInitHashJoin(HashJoin *node, EState *estate)
         
 		hjstate->hj_InnerTupleSlot = slot;
         //CSI3130-->
-		HashState  *hashstate = (HashState *) outerPlanState(hjstate);
-		TupleTableSlot *slot = hashstate->ps.ps_ResultTupleSlot;
+		*hashstate = (HashState *) outerPlanState(hjstate);
+		*slot = hashstate->ps.ps_ResultTupleSlot;
         
 		hjstate->hj_OuterTupleSlot = slot;
         //CSI3130<--
@@ -477,9 +510,10 @@ ExecInitHashJoin(HashJoin *node, EState *estate)
 	/*
 	 * initialize hash-specific info
 	 */
-	hjstate->hj_HashTable = NULL;
+	hjstate->hj_OuterHashTable = NULL;
+	hjstate->hj_InnerHashTable = NULL;
 	hjstate->hj_FirstOuterTupleSlot = NULL;
-	hjstate->hj_FirstinnerTupleSlot = NULL;//CSI3130
+	hjstate->hj_FirstInnerTupleSlot = NULL;//CSI3130
     
     //CSI3130-->
 	hjstate->hj_InnerCurHashValue = 0;
@@ -558,11 +592,17 @@ ExecEndHashJoin(HashJoinState *node)//CSI3130TODO Slide 10
 	/*
 	 * Free hash table
 	 */
-	if (node->hj_HashTable)
+	if (node->hj_OuterHashTable)
 	{
-		ExecHashTableDestroy(node->hj_HashTable);
-		node->hj_HashTable = NULL;
+		ExecHashTableDestroy(node->hj_OuterHashTable);
+		node->hj_OuterHashTable = NULL;
 	}
+	if (node->hj_InnerHashTable)
+	{
+		ExecHashTableDestroy(node->hj_InnerHashTable);
+		node->hj_InnerHashTable = NULL;
+	}
+    
     
 	/*
 	 * Free the exprcontext
@@ -575,7 +615,8 @@ ExecEndHashJoin(HashJoinState *node)//CSI3130TODO Slide 10
 	ExecClearTuple(node->js.ps.ps_ResultTupleSlot);
 	ExecClearTuple(node->hj_OuterTupleSlot);
 	ExecClearTuple(node->hj_InnerTupleSlot);//CSI3130
-	ExecClearTuple(node->hj_HashTupleSlot);
+	ExecClearTuple(node->hj_InnerHashTupleSlot);
+	ExecClearTuple(node->hj_OuterHashTupleSlot);
     
 	/*
 	 * clean up subtrees
@@ -913,7 +954,8 @@ ExecReScanHashJoin(HashJoinState *node, ExprContext *exprCtxt)
 		{
 			/* must destroy and rebuild hash table */
 			ExecHashTableDestroy(node->hj_InnerHashTable);
-			node->hj_HashTable = NULL;
+			node->hj_InnerHashTable = NULL;
+			node->hj_OuterHashTable = NULL;
             
 			/*
 			 * if chgParam of subnode is not null then plan will be re-scanned
