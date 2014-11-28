@@ -69,7 +69,7 @@ ExecHash(HashState *node)
 	 * get all inner tuples and insert into the hash table (or temp files)
 	 */
 		slot = ExecProcNode(outerNode);
-    if (slot != null){
+    if (slot != NULL){
 		hashtable->totalTuples += 1;
 		/* We have to compute the hash value */
 		econtext->ecxt_innertuple = slot;
