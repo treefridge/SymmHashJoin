@@ -86,7 +86,7 @@ ExecHashJoin(HashJoinState *node)
 	 * expressions).  If so, try to project another one.
 	 */
     
-    
+    elog(17,  "HI");
 	/*
 	 * If we're doing an IN join, we want to return at most one row per outer
 	 * tuple; so we can stop scanning the inner scan if we matched on the
@@ -167,7 +167,7 @@ ExecHashJoin(HashJoinState *node)
                 if(!TupIsNull(innerTupleSlot)){
                     node->hj_NeedNewInner = false;
                     //bool isNullAttr;
-                    printf("got new inner \n");
+                    elog(17,  "got new inner \n");
                 }
                 
                 //Get Hash Value
@@ -196,7 +196,7 @@ ExecHashJoin(HashJoinState *node)
                 if(!TupIsNull(outerTupleSlot)){
                     node->hj_NeedNewOuter = false;
                     //bool isNullAttr;
-                    printf("got new outer \n");
+                    elog(17,  "got new outer \n");
                 }
                 
                 //Get Hash Value
@@ -220,10 +220,10 @@ ExecHashJoin(HashJoinState *node)
         if (node->inner_exhausted && node->outer_exhausted)
         {
             /* end of join */
-            printf("both inner (%f tuples) and outer (%f tuples) exhausted\n", inner_hashtable->totalTuples, outer_hashtable->totalTuples);
-            printf("Got %d matches by probing inner hash table\n", node->matches_by_probing_inner);
-            printf("Got %d matches by probing outer hash table\n", node->matches_by_probing_outer);
-            printf("Assuming outer is always probed first\n");
+            elog(17,  "both inner (%f tuples) and outer (%f tuples) exhausted\n", inner_hashtable->totalTuples, outer_hashtable->totalTuples);
+            elog(17,  "Got %d matches by probing inner hash table\n", node->matches_by_probing_inner);
+            elog(17,  "Got %d matches by probing outer hash table\n", node->matches_by_probing_outer);
+            elog(17,  "Assuming outer is always probed first\n");
             return NULL;
         }
         
@@ -930,7 +930,7 @@ ExecReScanHashJoin(HashJoinState *node, ExprContext *exprCtxt)
 	 * inner subnode, then we can just re-use the existing hash table without
 	 * rebuilding it.
 	 */
-    printf("rescan called\n");//CSI3130
+    elog(17,  "rescan called\n");//CSI3130
 	if (node->hj_InnerHashTable != NULL)//CSI3130
 	{
 		if (node->hj_InnerHashTable->nbatch == 1 &&//CSI3130
