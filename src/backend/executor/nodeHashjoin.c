@@ -155,16 +155,30 @@ ExecHashJoin(HashJoinState *node)
 		/*
 		 * If we don't have an outer tuple, get the next one//CSI3130-->
 		 */
+		elog(17, "check 1 \n");
 		if ((node->hj_NeedNewInner || node->inner_exhausted) && (node->hj_NeedNewOuter || node->outer_exhausted))
 		{
+			elog(17, "check 1a \n");
 			if(node->isNextFetchInner)
 			{
+				elog(17, "check 1b \n");
             if(!node->inner_exhausted){
+				elog(17, "check 1c \n");
                 innerTupleSlot = ExecProcNode((PlanState*) inner_hashNode);
-                node->isNextFetchInner = false;
+                if(node->outer_exhausted)
+				{
+					elog(17, "check 1d \n");
+					node->isNextFetchInner = true;
+				}
+				else
+				{
+					elog(17, "check 1e \n");
+					node->isNextFetchInner = false; // deal with later!!!
+				}
                 node->js.ps.ps_InnerTupleSlot = innerTupleSlot;
                 
                 if(!TupIsNull(innerTupleSlot)){
+					elog(17, "check 1a \n");
                     node->hj_NeedNewInner = false;
                     //bool isNullAttr;
                     elog(17,  "got new inner \n");
@@ -181,16 +195,32 @@ ExecHashJoin(HashJoinState *node)
                 node->hj_InnerCurHashValue = hashvalue;
                 ExecHashGetBucketAndBatch(outer_hashtable, hashvalue, &node->hj_OuterCurBucketNo, &batchno);
                 node->hj_OuterCurTuple = NULL; //Reset current tuple in bucket in outer hash table
+				elog(17, "check 2 \n");
             } else {
                 node->inner_exhausted = true;
+				elog(17, "inner exhausted \n");
             }
 			}
 			else
 			{
 			//outer
 			if(!node->outer_exhausted){
+				elog(17, "check 2a \n");
+				if(outer_hashNode == NULL)
+				{
+					elog(17, "IT IS NUUUUUUL \n");
+				}
                 outerTupleSlot = ExecProcNode((PlanState*) outer_hashNode);
+				if(node->inner_exhausted)
+				{
+				elog(17, "check 2b \n");
+					node->isNextFetchInner = false;
+				}
+				else
+				{
+				elog(17, "check 2c \n");
                 node->isNextFetchInner = true; // deal with later!!!
+				}
                 node->js.ps.ps_OuterTupleSlot = outerTupleSlot;
                 
                 if(!TupIsNull(outerTupleSlot)){
@@ -210,8 +240,10 @@ ExecHashJoin(HashJoinState *node)
                 node->hj_OuterCurHashValue = hashvalue;
                 ExecHashGetBucketAndBatch(inner_hashtable, hashvalue, &node->hj_InnerCurBucketNo, &batchno);
                 node->hj_InnerCurTuple = NULL; //Reset current tuple in bucket in outer hash table
+				elog(17, "check 3 \n");
             } else {
                 node->outer_exhausted = true;
+				elog(17, "outer exhausted \n");
             }
 			}
 			//end outer
@@ -286,7 +318,7 @@ ExecHashJoin(HashJoinState *node)
                 }
             }
         
-        
+        elog(17, "check 4 \n");
         node->hj_NeedNewInner = true;
         node->js.ps.ps_InnerTupleSlot = NULL;
         
@@ -364,7 +396,8 @@ ExecHashJoin(HashJoinState *node)
         if (!node->hj_MatchedOuter &&
             node->js.jointype == JOIN_LEFT)
         {
-            /*
+            elog(17,"join type left");
+			/*
              * We are doing an outer join and there were no join matches for
              * this outer tuple.  Generate a fake join tuple with nulls for
              * the inner tuple, and return it if it passes the non-join quals.
@@ -389,8 +422,10 @@ ExecHashJoin(HashJoinState *node)
                 }
             }
         }
+		elog(17, "check 5 \n");
     }
 }
+
 
 /* ----------------------------------------------------------------
  *		ExecInitHashJoin
