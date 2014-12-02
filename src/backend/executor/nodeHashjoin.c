@@ -131,10 +131,10 @@ ExecHashJoin(HashJoinState *node)
 		 */
         //CSI3130-->
 		inner_hashtable = ExecHashTableCreate((Hash *) inner_hashNode->ps.plan,
-                                              node->hj_HashOperators);
+                                                       node->hj_HashOperators);
 		node->hj_InnerHashTable = inner_hashtable;
-        outer_hashtable = ExecHashTableCreate((Hash *) outer_hashNode->ps.plan,
-                                              node->hj_HashOperators);
+                outer_hashtable = ExecHashTableCreate((Hash *) outer_hashNode->ps.plan,
+                                                       node->hj_HashOperators);
 		node->hj_OuterHashTable = outer_hashtable;
         //CSI3130<--
         
@@ -144,7 +144,7 @@ ExecHashJoin(HashJoinState *node)
 		inner_hashNode->hashtable = inner_hashtable;//CSI3130
 		outer_hashNode->hashtable = outer_hashtable;//CSI3130
 	}
-    
+        elog(17,"function ExecHashJoin: process started");
 	/*
 	 * run the hash join process
 	 */
@@ -153,99 +153,84 @@ ExecHashJoin(HashJoinState *node)
 		/*
 		 * If we don't have an outer tuple, get the next one//CSI3130-->
 		 */
-		elog(17, "check 1 \n");
 		if ((node->hj_NeedNewInner || node->inner_exhausted) && (node->hj_NeedNewOuter || node->outer_exhausted))
 		{
-			elog(17, "check 1a \n");
 			if(node->isNextFetchInner)
 			{
-				elog(17, "check 1b \n");
-            if(!node->inner_exhausted){
-				elog(17, "check 1c \n");
-                innerTupleSlot = ExecProcNode((PlanState*) inner_hashNode);
-                if(node->outer_exhausted)
+                            if(!node->inner_exhausted){
+                                innerTupleSlot = ExecProcNode((PlanState*) inner_hashNode);
+                                if(node->outer_exhausted)
 				{
-					elog(17, "check 1d \n");
-					node->isNextFetchInner = true;
+                                    node->isNextFetchInner = true;
 				}
 				else
 				{
-					elog(17, "check 1e \n");
-					node->isNextFetchInner = false; // deal with later!!!
+				node->isNextFetchInner = false; // deal with later!!!
 				}
-                node->js.ps.ps_InnerTupleSlot = innerTupleSlot;
+                                node->js.ps.ps_InnerTupleSlot = innerTupleSlot;
                 
-                if(!TupIsNull(innerTupleSlot)){
-					elog(17, "check 1a \n");
-                    node->hj_NeedNewInner = false;
-                    //bool isNullAttr;
-                    elog(17,  "got new inner \n");
-                }
+                                if(!TupIsNull(innerTupleSlot)){
+                                    node->hj_NeedNewInner = false;
+                                    //bool isNullAttr;
+                                    elog(17,  "got new inner \n");
+                                }
                 
-                //Get Hash Value
-                ExprContext *econtext = node->js.ps.ps_ExprContext;
-                econtext->ecxt_innertuple = innerTupleSlot;
-                hashvalue = ExecHashGetHashValue(outer_hashtable, econtext,
-                                                 node->hj_InnerHashKeys);
-                node->js.ps.ps_InnerTupleSlot = innerTupleSlot;
-                econtext->ecxt_innertuple = node->js.ps.ps_InnerTupleSlot;
-                
-                node->hj_InnerCurHashValue = hashvalue;
-                ExecHashGetBucketAndBatch(outer_hashtable, hashvalue, &node->hj_OuterCurBucketNo, &batchno);
-                node->hj_OuterCurTuple = NULL; //Reset current tuple in bucket in outer hash table
-				elog(17, "check 2 \n");
-            } else {
-                node->inner_exhausted = true;
-				elog(17, "inner exhausted \n");
-            }
+                                //Get Hash Value
+                                ExprContext *econtext = node->js.ps.ps_ExprContext;
+                                econtext->ecxt_innertuple = innerTupleSlot;
+                                hashvalue = ExecHashGetHashValue(outer_hashtable, econtext,
+                                                                 node->hj_InnerHashKeys);
+                                node->js.ps.ps_InnerTupleSlot = innerTupleSlot;
+                                econtext->ecxt_innertuple = node->js.ps.ps_InnerTupleSlot;
+
+                                node->hj_InnerCurHashValue = hashvalue;
+                                ExecHashGetBucketAndBatch(outer_hashtable, hashvalue, &node->hj_OuterCurBucketNo, &batchno);
+                                node->hj_OuterCurTuple = NULL; //Reset current tuple in bucket in outer hash table
+                            } else {
+                                node->inner_exhausted = true;
+                            }
 			}
 			else
 			{
 			//outer
 			if(!node->outer_exhausted){
-				elog(17, "check 2a \n");
-				if(outer_hashNode == NULL)
-				{
-					elog(17, "IT IS NUUUUUUL \n");
-				}
-                outerTupleSlot = ExecProcNode((PlanState*) outer_hashNode);
-				if(node->inner_exhausted)
-				{
-				elog(17, "check 2b \n");
-					node->isNextFetchInner = false;
-				}
-				else
-				{
-				elog(17, "check 2c \n");
-                node->isNextFetchInner = true; // deal with later!!!
-				}
-                node->js.ps.ps_OuterTupleSlot = outerTupleSlot;
+                            if(outer_hashNode == NULL)
+                            {
+                                elog(17, "IT IS NUUUUUUL \n");
+                            }
+                            outerTupleSlot = ExecProcNode((PlanState*) outer_hashNode);
+                            if(node->inner_exhausted)
+                            {
+				node->isNextFetchInner = false;
+                            } else {
+                                node->isNextFetchInner = true; // deal with later!!!
+                            }
+                            node->js.ps.ps_OuterTupleSlot = outerTupleSlot;
                 
-                if(!TupIsNull(outerTupleSlot)){
-                    node->hj_NeedNewOuter = false;
-                    //bool isNullAttr;
-                    elog(17,  "got new outer \n");
+                            if(!TupIsNull(outerTupleSlot)){
+                                node->hj_NeedNewOuter = false;
+                                //bool isNullAttr;
+                                elog(17,  "got new outer \n");
+                            }
+                
+                            //Get Hash Value
+                            ExprContext *econtext = node->js.ps.ps_ExprContext;
+                            econtext->ecxt_outertuple = outerTupleSlot;
+                            hashvalue = ExecHashGetHashValue(inner_hashtable, econtext,
+                                                             node->hj_OuterHashKeys);
+                            node->js.ps.ps_OuterTupleSlot = outerTupleSlot;
+                            econtext->ecxt_outertuple = node->js.ps.ps_OuterTupleSlot;
+                
+                            node->hj_OuterCurHashValue = hashvalue;
+                            ExecHashGetBucketAndBatch(inner_hashtable, hashvalue, &node->hj_InnerCurBucketNo, &batchno);
+                            node->hj_InnerCurTuple = NULL; //Reset current tuple in bucket in outer hash table
+                        } else {
+                            node->outer_exhausted = true;
+                            elog(17, "outer exhausted \n");
+                        }
+                    }
+                    //end outer
                 }
-                
-                //Get Hash Value
-                ExprContext *econtext = node->js.ps.ps_ExprContext;
-                econtext->ecxt_outertuple = outerTupleSlot;
-                hashvalue = ExecHashGetHashValue(inner_hashtable, econtext,
-                                                 node->hj_OuterHashKeys);
-                node->js.ps.ps_OuterTupleSlot = outerTupleSlot;
-                econtext->ecxt_outertuple = node->js.ps.ps_OuterTupleSlot;
-                
-                node->hj_OuterCurHashValue = hashvalue;
-                ExecHashGetBucketAndBatch(inner_hashtable, hashvalue, &node->hj_InnerCurBucketNo, &batchno);
-                node->hj_InnerCurTuple = NULL; //Reset current tuple in bucket in outer hash table
-				elog(17, "check 3 \n");
-            } else {
-                node->outer_exhausted = true;
-				elog(17, "outer exhausted \n");
-            }
-			}
-			//end outer
-        }
         
         if (node->inner_exhausted && node->outer_exhausted)
         {
@@ -316,7 +301,6 @@ ExecHashJoin(HashJoinState *node)
                 }
             }
         
-        elog(17, "check 4 \n");
         node->hj_NeedNewInner = true;
         node->js.ps.ps_InnerTupleSlot = NULL;
         
@@ -420,7 +404,6 @@ ExecHashJoin(HashJoinState *node)
                 }
             }
         }
-		elog(17, "check 5 \n");
     }
 }
 
