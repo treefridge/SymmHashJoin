@@ -33,7 +33,7 @@ VERSION = 8.1.4
 
 # Support for VPATH builds
 vpath_build = no
-abs_top_srcdir = /home/genh/h/i2/pidur072/postgresql-8.1.4/src/..
+abs_top_srcdir = /Users/Emi/PostgreSQL_SymmHashJoin/src/..
 
 ifneq ($(vpath_build),yes)
 top_srcdir = $(top_builddir)
@@ -45,7 +45,7 @@ srcdir = $(top_srcdir)/$(subdir)
 endif
 
 # Saved arguments from configure
-configure_args = '--prefix=/home/genh/h/i2/pidur072/database' '--enable-debug' '--enable-depend'
+configure_args = 'CC=/usr/bin/gcc' 'CXX=/usr/bin/g++' 'CFLAGS=-g3 -gdwarf-2' 'CXXFLAGS=-g3 -gdwarf-2'
 
 
 ##########################################################################
@@ -65,7 +65,7 @@ ifndef PGXS
 # Note that prefix and exec_prefix aren't defined in a PGXS build;
 # makefiles may only use the derived variables such as bindir.
 
-prefix := /home/genh/h/i2/pidur072/database
+prefix := /usr/local/pgsql
 exec_prefix := ${prefix}
 
 bindir := ${exec_prefix}/bin
@@ -154,7 +154,7 @@ with_zlib	= yes
 enable_shared	= yes
 enable_rpath	= yes
 enable_nls	= no
-enable_debug	= yes
+enable_debug	= no
 enable_thread_safety	= no
 
 python_includespec	= 
@@ -188,8 +188,8 @@ COLLATEINDEX	=
 
 # Compilers
 
-CPP = gcc -E
-CPPFLAGS = -D_GNU_SOURCE 
+CPP = /usr/bin/gcc -no-cpp-precomp -E
+CPPFLAGS =  
 
 ifdef PGXS
 override CPPFLAGS := -I$(includedir_server) -I$(includedir_internal) $(CPPFLAGS)
@@ -200,9 +200,9 @@ override CPPFLAGS := -I$(top_builddir)/src/include $(CPPFLAGS)
 endif
 endif # not PGXS
 
-CC = gcc
+CC = /usr/bin/gcc -no-cpp-precomp
 GCC = yes
-CFLAGS = -O2 -Wall -Wmissing-prototypes -Wpointer-arith -Winline -Wdeclaration-after-statement -Wendif-labels -fno-strict-aliasing -g
+CFLAGS = -g3 -gdwarf-2 -Wall -Wmissing-prototypes -Wpointer-arith -Winline -Wdeclaration-after-statement -Wendif-labels -fno-strict-aliasing
 
 # Kind-of compilers
 
@@ -213,16 +213,16 @@ FLEXFLAGS =  $(LFLAGS)
 
 # Linking
 
-LIBS = -lz -lreadline -lcrypt -lresolv -lnsl -ldl -lm -lbsd 
-LD = /usr/bin/ld
-with_gnu_ld = yes
+LIBS = -lz -lreadline -lresolv -ldl -lm 
+LD = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+with_gnu_ld = no
 ld_R_works = 
 LDFLAGS =  
 LDFLAGS_SL = 
 LDREL = -r
 LDOUT = -o
 RANLIB = ranlib
-LORDER = 
+LORDER = lorder
 X = 
 
 # Perl 
@@ -236,12 +236,12 @@ perl_embed_ldflags	=
 
 # Miscellaneous
 
-AWK	= gawk
+AWK	= awk
 LN_S	= ln -s
 MSGFMT  = 
 MSGMERGE = 
 PYTHON	= 
-TAR	= /bin/tar
+TAR	= /usr/bin/tar
 XGETTEXT = 
 
 GZIP	= gzip
@@ -268,8 +268,8 @@ mkinstalldirs	= $(SHELL) $(top_srcdir)/config/mkinstalldirs
 missing		= $(SHELL) $(top_srcdir)/config/missing
 
 STRIP		= strip
-STRIP_STATIC_LIB = strip -x
-STRIP_SHARED_LIB = strip --strip-unneeded
+STRIP_STATIC_LIB = :
+STRIP_SHARED_LIB = :
 
 # Documentation
 
@@ -289,11 +289,11 @@ WANTED_LANGUAGES =
 #
 
 # Name of the "template"
-PORTNAME= linux
+PORTNAME= darwin
 
-host_tuple = x86_64-unknown-linux-gnu
-host_os = linux-gnu
-host_cpu = x86_64
+host_tuple = i686-apple-darwin13.4.0
+host_os = darwin13.4.0
+host_cpu = i686
 
 # Make HAVE_IPV6 available for initdb script creation
 HAVE_IPV6= yes
@@ -303,7 +303,7 @@ HAVE_POSIX_SIGNALS= yes
 
 # This is mainly for use on FreeBSD, where we have both a.out and elf
 # systems now.  May be applicable to other systems to?
-ELF_SYSTEM= true
+ELF_SYSTEM= 
 
 # Pull in platform-specific magic
 include $(top_builddir)/src/Makefile.port
@@ -522,7 +522,7 @@ install-strip:
 # that make will update all files that depended on the now removed
 # file.)
 
-autodepend = yes
+autodepend = 
 
 ifeq ($(autodepend), yes)
 
