@@ -46,9 +46,8 @@ TupleTableSlot *				/* return: a tuple or NULL */
 ExecHashJoin(HashJoinState *node)
 {
 	EState	   *estate;
-	HashState  *outerNode;//CSI3130
 	HashState  *inner_hashNode;//CSI3130
-    HashState  *outer_hashNode;//CSI3130
+        HashState  *outer_hashNode;//CSI3130
 	List	   *joinqual;
 	List	   *otherqual;
 	TupleTableSlot *inntuple;
@@ -61,7 +60,7 @@ ExecHashJoin(HashJoinState *node)
 	TupleTableSlot *outerTupleSlot;
 	TupleTableSlot *innerTupleSlot;//CSI3130
 	uint32		hashvalue;
-	int			batchno;
+	int		batchno;
     
 	/*
 	 * get information from HashJoin node
@@ -71,7 +70,6 @@ ExecHashJoin(HashJoinState *node)
 	otherqual = node->js.ps.qual;
 	inner_hashNode = (HashState *) innerPlanState(node);
 	outer_hashNode = (HashState *) outerPlanState(node);
-	outerNode = (HashState *) outerPlanState(node);
     
 	/*
 	 * get information from HashJoin state
