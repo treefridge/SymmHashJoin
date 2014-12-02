@@ -42,7 +42,8 @@ static void ExecHashIncreaseNumBatches(HashJoinTable hashtable);
 TupleTableSlot *
 ExecHash(HashState *node)
 {//*CSI3130Project_CodeFromMultiExecHashwithmodifs
-    PlanState  *outerNode;
+    elog(17, "ExecHash: started");
+        PlanState  *outerNode;
 	List	   *hashkeys;
 	HashJoinTable hashtable;
 	TupleTableSlot *slot;
@@ -68,16 +69,30 @@ ExecHash(HashState *node)
 	/*
 	 * get all inner tuples and insert into the hash table (or temp files)
 	 */
-		slot = ExecProcNode(outerNode);
-    if (slot != NULL){
+        slot = ExecProcNode(outerNode);
+	if(outerNode==NULL)
+		elog(17,"ExecHash: outerNode is null");
+	if(hashtable==NULL)
+		elog(17,"ExecHash: hashtable is null");
+	if(hashkeys==NULL)
+		elog(17,"ExecHash: hashkeys is null");
+	if(econtext==NULL)
+		elog(17,"ExecHash: econtext is null");
+	if(slot==NULL)
+		elog(17,"ExecHash: slot is null");	
+        
+    elog(17, "nodeHash done setting new slot");
+    if (!TupIsNull(slot)){//CSI3130
 		hashtable->totalTuples += 1;
 		/* We have to compute the hash value */
 		econtext->ecxt_innertuple = slot;
-        econtext->ecxt_outertuple = slot;//*CSI3130Project
+                econtext->ecxt_outertuple = slot;//*CSI3130Project
 		hashvalue = ExecHashGetHashValue(hashtable, econtext, hashkeys);
 		ExecHashTableInsert(hashtable, ExecFetchSlotTuple(slot), hashvalue);
+    } else{
+        elog(17, "ExecHash: slot is null...?");
     }
-    
+        
 	/* must provide our own instrumentation support */
 	if (node->ps.instrument)
 		InstrStopNodeMulti(node->ps.instrument, hashtable->totalTuples);
@@ -103,6 +118,7 @@ ExecHash(HashState *node)
 Node *
 MultiExecHash(HashState *node)
 {
+    elog(17,"multiExecHash: Started");
 	PlanState  *outerNode;
 	List	   *hashkeys;
 	HashJoinTable hashtable;
@@ -799,6 +815,7 @@ HeapTuple
 ExecScanHashBucket_probingInner(HashJoinState *hjstate,
 				   ExprContext *econtext)
 {
+        elog(17,"ExecScanHashBucket_probingInner: Started");
 	List	   *hjclauses = hjstate->hashclauses;
 	HashJoinTable hashtable = hjstate->hj_InnerHashTable;
 	HashJoinTuple hashTuple = hjstate->hj_InnerCurTuple;
@@ -858,6 +875,7 @@ HeapTuple
 ExecScanHashBucket_probingOuter(HashJoinState *hjstate,
 				   ExprContext *econtext)
 {
+    elog(17,"ExecScanHashBucket_probingOuter: Started");
 	List	   *hjclauses = hjstate->hashclauses;
 	HashJoinTable hashtable = hjstate->hj_OuterHashTable;
 	HashJoinTuple hashTuple = hjstate->hj_OuterCurTuple;

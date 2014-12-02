@@ -1149,10 +1149,10 @@ typedef struct HashJoinState//*CSI3130Project
     bool        hj_NeedNewInner;
     bool        hj_NeedNewOuter;
     
-	bool		hj_MatchedOuter;
+    bool        hj_MatchedOuter;
     
     bool        hj_InnerNotEmpty;
-	bool		hj_OuterNotEmpty;
+    bool        hj_OuterNotEmpty;
     
     int         matches_by_probing_inner;
     int         matches_by_probing_outer;
