@@ -267,7 +267,7 @@ elog(17,  "HI");
                      */
                     elog(17,"ExecHashJoin: we've got a match, but still need to test non-hashed quals");
                     outtuple = ExecStoreTuple(curtuple,
-                                              node->hj_OuterHashTupleSlot,
+                                              node->hj_OuterTupleSlot,
                                               InvalidBuffer,
                                               false);	/* don't pfree this tuple */
 					
