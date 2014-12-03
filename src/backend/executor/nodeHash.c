@@ -168,7 +168,7 @@ MultiExecHash(HashState *node)
 	 * state.  Ugly but not really worth cleaning up, since Hashjoin knows
 	 * quite a bit more about Hash besides that.
 	 */
-	return slot;
+	return NULL;
 }
 
 /* ----------------------------------------------------------------
@@ -820,55 +820,51 @@ ExecScanHashBucket_probingInner(HashJoinState *hjstate,
 	HashJoinTable hashtable = hjstate->hj_InnerHashTable;
 	HashJoinTuple hashTuple = hjstate->hj_InnerCurTuple;
 	uint32		hashvalue = hjstate->hj_OuterCurHashValue;
+        int           bucketNo = hjstate->hj_InnerCurBucketNo;
 
 	/*
 	 * hj_CurTuple is NULL to start scanning a new bucket, or the address of
 	 * the last tuple returned from the current bucket.
 	 */
 	if (hashTuple == NULL)
-	{
-		//*CSI3130Project
-        hashTuple = hashtable->buckets[hjstate->hj_InnerCurBucketNo];
-		return NULL;
-	}
+            hashTuple = hashtable->buckets[bucketNo];
 	else
-	{
             hashTuple = hashTuple->next;
-            while (hashTuple != NULL)
+        while (hashTuple != NULL)
+        {
+            
+            if (hashTuple->hashvalue == hashvalue)
             {
-		if (hashTuple->hashvalue == hashvalue)
-		{
-			HeapTuple	heapTuple = &hashTuple->htup;
+                    HeapTuple	heapTuple = &hashTuple->htup;
 
-			TupleTableSlot *inntuple;
-	        	        inntuple = ExecStoreTuple(heapTuple,
-                                                                          hjstate->hj_InnerHashTupleSlot,
-                                                                          InvalidBuffer,
-                                                                          false);
-
-			
-			if(TupIsNull (inntuple))
-				elog(17,"ExecScanHashBucket: tuple is null");
-			
-			econtext->ecxt_innertuple = inntuple;
-			
-			/* reset temp memory each time to avoid leaks from qual expr */
-			ResetExprContext(econtext);
+                    TupleTableSlot *inntuple;
+                            inntuple = ExecStoreTuple(heapTuple,
+                                                                      hjstate->hj_InnerHashTupleSlot,
+                                                                      InvalidBuffer,
+                                                                      false);
 
 
-			if (ExecQual(hjclauses, econtext, false))
-			{
-			 	hjstate->hj_InnerCurTuple = hashTuple;
-				return heapTuple;
-			}
-		}
-		hashTuple = hashTuple->next;
+                    if(TupIsNull (inntuple))
+                            elog(17,"ExecScanHashBucket: tuple is null");
+
+                    econtext->ecxt_innertuple = inntuple;
+
+                    /* reset temp memory each time to avoid leaks from qual expr */
+                    ResetExprContext(econtext);
+
+
+                    if (ExecQual(hjclauses, econtext, false))
+                    {
+                            hjstate->hj_InnerCurTuple = hashTuple;
+                            return heapTuple;
+                    }
             }
-	}
+            hashTuple = hashTuple->next;
+        }
+	
         
 	return NULL;
 }
-
 //*CSI3130Project
 /*
  * ExecScanHashBucket
@@ -885,18 +881,15 @@ ExecScanHashBucket_probingOuter(HashJoinState *hjstate,
 	HashJoinTable hashtable = hjstate->hj_OuterHashTable;
 	HashJoinTuple hashTuple = hjstate->hj_OuterCurTuple;
 	uint32		hashvalue = hjstate->hj_InnerCurHashValue;
+        int           bucketNo = hjstate->hj_OuterCurBucketNo;
     
 	/*
 	 * hj_CurTuple is NULL to start scanning a new bucket, or the address of
 	 * the last tuple returned from the current bucket.
 	 */
 	if (hashTuple == NULL)
-	{
-		hashTuple = hashtable->buckets[hjstate->hj_OuterCurBucketNo];
-		return NULL;
-	}
+		hashTuple = hashtable->buckets[bucketNo];
 	else
-	{
 		hashTuple = hashTuple->next;
 		while (hashTuple != NULL)
 		{
@@ -927,7 +920,6 @@ ExecScanHashBucket_probingOuter(HashJoinState *hjstate,
 			}
                     }
                     hashTuple = hashTuple->next;
-                }
 	}
         return NULL;
 }
