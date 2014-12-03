@@ -91,12 +91,11 @@ ExecHash(HashState *node)
 		ExecHashTableInsert(hashtable, ExecFetchSlotTuple(slot), hashvalue);
     } else{
         elog(17, "ExecHash: slot is null...?");
-    }
-        
 	/* must provide our own instrumentation support */
 	if (node->ps.instrument)
 		InstrStopNodeMulti(node->ps.instrument, hashtable->totalTuples);
-    
+        return NULL;
+    }
 	/*
 	 * We do not return the hash table directly because it's not a subtype of
 	 * Node, and so would violate the MultiExecProcNode API.  Instead, our
@@ -104,6 +103,7 @@ ExecHash(HashState *node)
 	 * state.  Ugly but not really worth cleaning up, since Hashjoin knows
 	 * quite a bit more about Hash besides that.
 	 */
+        elog(17, "Done with nodeHash.ExecHash");
 	return slot;//*CSI3130Project
 
 }
