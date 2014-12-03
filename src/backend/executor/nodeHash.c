@@ -812,99 +812,127 @@ ExecHashGetBucketAndBatch(HashJoinTable hashtable,
  * The current outer tuple must be stored in econtext->ecxt_outertuple.
  */
 HeapTuple
-ExecScanHashBucket_probingInner(HashJoinState *hjstate,
+ExecScanHashBucket(HashJoinState *hjstate,
 				   ExprContext *econtext)
 {
-        elog(17,"ExecScanHashBucket_probingInner: Started");
-	List *hjclauses = hjstate->hashclauses;
-        HashJoinTable hashtable = hjstate->hj_InnerHashTable;
-        HashJoinTuple hashTuple = hjstate->hj_InnerCurTuple;
-        uint32 hashvalue = hjstate->hj_OuterCurHashValue;
-        /*
-        * hj_CurTuple is NULL to start scanning a new bucket, or the address of
-        * the last tuple returned from the current bucket.
-        */
-        if (hashTuple == NULL)
-            hashTuple = hashtable->buckets[hjstate->hj_InnerCurBucketNo];
-        else
-            hashTuple = hashTuple->next;
-        while (hashTuple != NULL)
-        {
-            if (hashTuple->hashvalue == hashvalue)
-            {
-                HeapTuple heapTuple = &hashTuple->htup;
-                TupleTableSlot *inntuple;
-                /* insert hashtable's tuple into exec slot so ExecQual sees it */
-                inntuple = ExecStoreTuple(heapTuple,
-                                          hjstate->hj_InnerHashTupleSlot,
-                                          InvalidBuffer,
-                                          false); /* do not pfree */
-                econtext->ecxt_innertuple = inntuple;
-                /* reset temp memory each time to avoid leaks from qual expr */
-                ResetExprContext(econtext);
-                if (ExecQual(hjclauses, econtext, false))
-                {
-                    hjstate->hj_InnerCurTuple = hashTuple;
-                    return heapTuple;
-                }
-            }
-        hashTuple = hashTuple->next;
-        }
-        /*
-        * no match
-        */
-        return NULL;
-}
-//*CSI3130Project
-/*
- * ExecScanHashBucket
- *		scan a hash bucket for matches to the current outer tuple
- *
- * The current outer tuple must be stored in econtext->ecxt_outertuple.
- */
-HeapTuple
-ExecScanHashBucket_probingOuter(HashJoinState *hjstate,
-				   ExprContext *econtext)
-{
-    elog(17,"ExecScanHashBucket_probingOuter: Started");
-	List *hjclauses = hjstate->hashclauses;
-        HashJoinTable hashtable = hjstate->hj_OuterHashTable;
-        HashJoinTuple hashTuple = hjstate->hj_OuterCurTuple;
-        uint32 hashvalue = hjstate->hj_InnerCurHashValue;
-        /*
-        * hj_CurTuple is NULL to start scanning a new bucket, or the address of
-        * the last tuple returned from the current bucket.
-        */
-        if (hashTuple == NULL)
-            hashTuple = hashtable->buckets[hjstate->hj_OuterCurBucketNo];
-        else
-            hashTuple = hashTuple->next;
-        while (hashTuple != NULL)
-        {
-            if (hashTuple->hashvalue == hashvalue)
-            {
-                HeapTuple heapTuple = &hashTuple->htup;
-                TupleTableSlot *outtuple;
-                /* insert hashtable's tuple into exec slot so ExecQual sees it */
-                outtuple = ExecStoreTuple(heapTuple,
-                                          hjstate->hj_OuterHashTupleSlot,
-                                          InvalidBuffer,
-                                          false); // do not pfree
-                econtext->ecxt_outertuple = outtuple;
-                /* reset temp memory each time to avoid leaks from qual expr */
-                ResetExprContext(econtext);
-                if (ExecQual(hjclauses, econtext, false))
-                {
-                    hjstate->hj_OuterCurTuple = hashTuple;
-                    return heapTuple;
-                }
-            }
-            hashTuple = hashTuple->next;
-        }
-        /*
-        * no match
-        */
-        return NULL;
+    	List	   *hjclauses = hjstate->hashclauses;
+	
+	/*CSI3130*/
+	HashJoinTable hashtable;
+	HashJoinTuple hashTuple;
+	uint32	hashvalue;
+	int	bucketNo;
+
+	/*CSI3130*/
+	elog(WARNING,"ExecScanHashBucket: Begin");
+	if(hjstate->probing_inner){
+		hashtable = hjstate->hj_InnerHashTable;
+		hashTuple = hjstate->hj_InnerCurTuple;
+		hashvalue = hjstate->hj_OuterCurHashValue;
+		bucketNo = hjstate->hj_InnerCurBucketNo;
+	}else{
+                hashtable = hjstate->hj_OuterHashTable;
+                hashTuple = hjstate->hj_OuterCurTuple;
+                hashvalue = hjstate->hj_InnerCurHashValue;
+                bucketNo = hjstate->hj_OuterCurBucketNo;
+ 	}
+	
+	elog(WARNING,"ExecScanHashBucket: got info");
+	/*
+	 * inner_hj_CurTuple is NULL to start scanning a new bucket, or the address of
+	 * the last tuple returned from the current bucket.
+	 */
+	if (hashTuple == NULL)
+		hashTuple = hashtable->buckets[bucketNo];
+	else
+		hashTuple = hashTuple->next;
+
+	elog(WARNING,"ExecScanHashBucket: hash");
+
+	while (hashTuple != NULL)
+	{
+
+		if (hashTuple->hashvalue == hashvalue)
+		{
+			HeapTuple	heapTuple = &hashTuple->htup;
+			/*CSI3130: load econtext for both inner and outer*/
+
+			TupleTableSlot *inntuple;
+			if(hjstate->probing_inner){
+	        	        inntuple = ExecStoreTuple(heapTuple,
+                                                                          hjstate->hj_InnerHashTupleSlot,
+                                                                          InvalidBuffer,
+                                                                          false);
+			}else{
+                                inntuple = ExecStoreTuple(heapTuple,
+                                                                          hjstate->hj_OuterHashTupleSlot,
+                                                                          InvalidBuffer,
+                                                                          false);
+
+			}
+
+			/*inntuple = ExecStoreMinimalTuple (HJTUPLE_MINTUPLE(hashTuple), tupleSlot, false);*/
+			if(TupIsNull (inntuple))
+				elog(WARNING,"ExecScanHashBucket: tuple is null");
+			if(hjstate->probing_inner){
+				elog(WARNING,"ExecScanHashBucket: probing inner true");
+				econtext->ecxt_innertuple = inntuple;
+			}else{
+				elog(WARNING,"ExecScanHashBucket: probing inner false");
+				econtext->ecxt_outertuple = inntuple;
+			}
+		/*
+			if(hjstate->probing_inner){
+				TupleTableSlot *inntuple;
+				
+				inntuple = ExecStoreTuple(heapTuple,
+									  hjstate->inner_hj_HashTupleSlot,
+									  InvalidBuffer,
+									  false);
+				econtext->ecxt_innertuple = inntuple;
+				tupleSlot = inntuple;
+			}else{
+			        TupleTableSlot *outtuple;
+                
+                           
+                                outtuple = ExecStoreTuple(heapTuple,
+                                                                          hjstate->outer_hj_HashTupleSlot,
+                                                                          InvalidBuffer,
+                                                                          false);      
+                                econtext->ecxt_outertuple = outtuple;
+				tupleSlot = outtuple;
+			}*/
+
+
+			/* reset temp memory each time to avoid leaks from qual expr */
+			ResetExprContext(econtext);
+
+			elog(WARNING,"ExecScanHashBucket: check");
+
+			if (ExecQual(hjclauses, econtext, false))
+			{
+				elog(WARNING,"ExecScanHashBucket: end_qual");
+				/*CSI3130 for both probing states*/
+				if(hjstate->probing_inner){
+			 		hjstate->hj_InnerCurTuple = hashTuple;
+				}else{
+					hjstate->hj_OuterCurTuple = hashTuple;
+				}
+				/*CSI3130 return hashTuple*/
+				
+				elog(WARNING,"ExecScanHashBucket: end");
+				return heapTuple;
+			}
+		}
+		elog(WARNING,"ExecScanHashBucket: hashtuple");
+		hashTuple = hashTuple->next;
+	}
+	
+	elog(WARNING,"ExecHashBucket: endloop");
+	/*
+	 * no match
+	 */
+	return NULL;
 }
 
 /*

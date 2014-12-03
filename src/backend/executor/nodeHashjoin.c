@@ -256,8 +256,8 @@ elog(17,  "HI");
                 {
                     ExprContext *econtext = node->js.ps.ps_ExprContext;
                     econtext->ecxt_innertuple = node->js.ps.ps_InnerTupleSlot;
-
-                    curtuple = ExecScanHashBucket_probingOuter(node, econtext);
+                    node->probing_inner = false;
+                    curtuple = ExecScanHashBucket(node, econtext);
                     if (curtuple == NULL){
                         elog(17,"ExecHashJoin: no more matches for the current inner tuple");        
                         node->isNextFetchInner = false;
@@ -322,8 +322,8 @@ elog(17,  "HI");
                 {
                     ExprContext *econtext = node->js.ps.ps_ExprContext;
                     econtext->ecxt_outertuple = node->js.ps.ps_OuterTupleSlot;
-
-                    curtuple = ExecScanHashBucket_probingInner(node, econtext);
+                    node->probing_inner = true;
+                    curtuple = ExecScanHashBucket(node, econtext);
                     if (curtuple == NULL)
 					{
                         elog(17,"ExecHashJoin: no more matches for the current outer tuple");        
@@ -556,6 +556,8 @@ ExecInitHashJoin(HashJoin *node, EState *estate)
     
         hjstate->inner_exhausted = false;
         hjstate->outer_exhausted = false;
+        hjstate->probing_inner = false;
+        hjstate->probing_outer = false;
     //CSI3130<--
     
 	/*

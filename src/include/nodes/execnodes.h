@@ -1156,6 +1156,10 @@ typedef struct HashJoinState//*CSI3130Project
     
     int         matches_by_probing_inner;
     int         matches_by_probing_outer;
+    
+    bool        probing_inner;
+    bool        probing_outer;
+    
     bool        isNextFetchInner;       //false -> outer, true -> inner
 } HashJoinState;
 
