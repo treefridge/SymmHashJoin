@@ -195,7 +195,7 @@ elog(17,  "HI");
                 }
                 else
                 {
-                    elog(17, "ExecHashJoin: inner doesn't have any more tuples");
+                   elog(17, "ExecHashJoin: inner doesn't have any more tuples");
                    node->inner_exhausted = true;
                 }
             }
@@ -206,7 +206,8 @@ elog(17,  "HI");
                 outerTupleSlot = ExecProcNode((PlanState*) outer_hashNode);
                 node->js.ps.ps_OuterTupleSlot = outerTupleSlot;
 
-                if(!TupIsNull(outerTupleSlot)){
+                if(!TupIsNull(outerTupleSlot))
+				{
                     node->hj_NeedNewOuter = false;
                     //bool isNullAttr;
                     elog(17,  "ExecHashJoin: got new outer \n");
@@ -269,8 +270,9 @@ elog(17,  "HI");
                                               node->hj_OuterHashTupleSlot,
                                               InvalidBuffer,
                                               false);	/* don't pfree this tuple */
+					
                     econtext->ecxt_outertuple = outtuple;
-
+					
                     /* reset temp memory each time to avoid leaks from qual expr */
                     ResetExprContext(econtext);
 
