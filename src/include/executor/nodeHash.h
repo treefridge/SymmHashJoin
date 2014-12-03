@@ -35,9 +35,7 @@ extern void ExecHashGetBucketAndBatch(HashJoinTable hashtable,
 						  uint32 hashvalue,
 						  int *bucketno,
 						  int *batchno);
-extern HeapTuple ExecScanHashBucket_probingOuter(HashJoinState *hjstate,
-                                    ExprContext *econtext);
-extern HeapTuple ExecScanHashBucket_probingInner(HashJoinState *hjstate,
+extern HeapTuple ExecScanHashBucket(HashJoinState *hjstate,
                                     ExprContext *econtext);
 extern void ExecHashTableReset(HashJoinTable hashtable);
 extern void ExecChooseHashTableSize(double ntuples, int tupwidth,
